@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric Olombel - Resume</title>
+    <meta property="og:title" content="Eric Olombel - Resume">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rico34fr.github.io/">
+    <meta property="og:image" content="https://rico34fr.github.io/photo.jpg">
+    <meta property="og:description" content="CFO / VP Finance">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19; /* Deep dark blue/black */
+            --card-bg: rgba(30, 41, 59, 0.4);
+            --card-border: rgba(14, 165, 233, 0.15);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-cyan: #0ea5e9; /* Tech vibe */
+            --accent-emerald: #10b981; /* Finance vibe */
+            --accent-gradient: linear-gradient(135deg, var(--accent-cyan), var(--accent-emerald));
+            --glow: 0 0 20px rgba(14, 165, 233, 0.2);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 60px 20px;
+            /* Subtly glowing background orbs */
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(14, 165, 233, 0.08), transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(16, 185, 129, 0.08), transparent 40%);
+            background-attachment: fixed;
+        }
+
+        ::selection {
+            background: rgba(14, 165, 233, 0.3);
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 50px;
+        }
+
+        @media (max-width: 850px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        /* --- SIDEBAR --- */
+        .sidebar {
+            position: sticky;
+            top: 60px;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        @media (max-width: 850px) {
+            .sidebar {
+                position: relative !important;
+                top: 0;
+            }
+        }
+
+        .header-section {
+            text-align: center;
+        }
+
+        .profile-pic {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent-cyan);
+            box-shadow: var(--glow);
+            margin-bottom: 15px;
+        }
+
+        .header-section h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 8px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.95rem;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            transition: color 0.3s ease;
+        }
+
+        .contact-item:hover {
+            color: var(--text-main);
+        }
+
+        .contact-icon {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent-emerald);
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .summary {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-weight: 300;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        /* --- MAIN CONTENT --- */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: var(--text-main);
+        }
+
+        h2::before {
+            content: '//';
+            color: var(--accent-cyan);
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+        }
+
+        h2::after {
+            content: '';
+            height: 1px;
+            flex-grow: 1;
+            background: linear-gradient(90deg, rgba(148, 163, 184, 0.15), transparent);
+        }
+
+        /* SKILLS GRID */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 20px;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(16, 185, 129, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.15);
+        }
+
+        .skill-cat {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--accent-emerald);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .skill-val {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-main);
+            line-height: 1.4;
+        }
+
+        /* DONUT CHART */
+        .trend-card {
+            grid-column: span 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media (max-width: 850px) {
+            .trend-card {
+                grid-column: span 1;
+            }
+            .donut-dashboard {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        .donut-dashboard {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .donut-container {
+            width: 120px;
+            height: 120px;
+            position: relative;
+        }
+
+        .donut-legend {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        /* EXPERIENCE */
+        .experience-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            position: relative;
+        }
+
+        /* Connecting line for timeline */
+        .experience-list::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: linear-gradient(to bottom, var(--accent-cyan), transparent);
+            opacity: 0.3;
+        }
+
+        .job-card {
+            position: relative;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 35px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-left: 40px;
+        }
+
+        /* Timeline Dot */
+        .job-card::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 40px;
+            width: 9px;
+            height: 9px;
+            background: var(--bg-color);
+            border: 2px solid var(--accent-cyan);
+            border-radius: 50%;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .job-card:hover {
+            border-color: rgba(14, 165, 233, 0.4);
+            box-shadow: var(--glow);
+            transform: translateX(5px);
+        }
+
+        .job-card:hover::before {
+            background: var(--accent-cyan);
+            box-shadow: 0 0 10px var(--accent-cyan);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .job-title-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .job-title-text {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .company-logo {
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            object-fit: contain;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .company-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .role-title {
+            font-size: 1.1rem;
+            color: var(--accent-cyan);
+            font-weight: 400;
+        }
+
+        .job-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--accent-emerald);
+            background: rgba(16, 185, 129, 0.1);
+            padding: 6px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .company-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-style: italic;
+            border-left: 2px solid rgba(255,255,255,0.1);
+            padding-left: 15px;
+        }
+
+        .job-card ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .job-card li {
+            position: relative;
+            padding-left: 25px;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .job-card li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            top: 0px;
+            color: var(--accent-cyan);
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: bold;
+        }
+
+        .job-card li strong {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        /* EDUCATION */
+        .edu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .edu-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .edu-school {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-main);
+        }
+
+        .edu-degree {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .edu-type {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--accent-emerald);
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="header-section">
+                <img src="photo.jpg" alt="Eric Olombel" class="profile-pic">
+                <h1>Eric Olombel</h1>
+                <div class="subtitle">CFO / VP Finance</div>
+            </div>
+
+            <p class="summary">
+                High-impact Finance Executive with 15+ years of experience scaling financial operations, driving venture capital fundraising <span class="highlight">($100M+)</span>, and engineering <span class="highlight">tech-enabled</span> finance departments. Expert in deploying AI-powered forecasting, robust ERPs, and structuring international operations for hyper-growth.
+            </p>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span> Paris, France
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📱</span> +33 (0)7 66 38 69 40
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">✉️</span> eolombel@gmail.com
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">🔗</span> linkedin.com/in/eric-olombel
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            
+            <section>
+                <h2>Core Competencies</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-cat">Strategic Finance</div>
+                        <div class="skill-val">Board Reporting, M&A Due Diligence, LRP & AOP</div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-cat">Fundraising</div>
+                        <div class="skill-val">VC Relations (Series B/C), Venture Debt, Treasury</div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-cat">Finance Tech & AI</div>
+                        <div class="skill-val">NetSuite, Pennylane, Python, Claude, AI tools for Finance</div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-cat">Execution</div>
+                        <div class="skill-val">Cost Reduction, Unit Economics, Global Scalability</div>
+                    </div>
+                    
+                    <!-- Donut Chart -->
+                    <div class="skill-card trend-card">
+                        <div class="skill-cat">Core Expertise Breakdown</div>
+                        <div class="donut-dashboard">
+                            <div class="donut-container">
+                                <svg viewBox="0 0 36 36" class="donut">
+                                    <!-- Background -->
+                                    <circle cx="18" cy="18" r="15.91549430918954" fill="transparent" stroke="rgba(255,255,255,0.05)" stroke-width="4"></circle>
+                                    <!-- Segments -->
+                                    <circle cx="18" cy="18" r="15.91549430918954" fill="transparent" stroke="#6366f1" stroke-width="4" stroke-dasharray="30 70" stroke-dashoffset="25"></circle>
+                                    <circle cx="18" cy="18" r="15.91549430918954" fill="transparent" stroke="#0ea5e9" stroke-width="4" stroke-dasharray="25 75" stroke-dashoffset="-5"></circle>
+                                    <circle cx="18" cy="18" r="15.91549430918954" fill="transparent" stroke="#10b981" stroke-width="4" stroke-dasharray="10 90" stroke-dashoffset="-30"></circle>
+                                    <circle cx="18" cy="18" r="15.91549430918954" fill="transparent" stroke="#ec4899" stroke-width="4" stroke-dasharray="15 85" stroke-dashoffset="-40"></circle>
+                                    <circle cx="18" cy="18" r="15.91549430918954" fill="transparent" stroke="#f59e0b" stroke-width="4" stroke-dasharray="20 80" stroke-dashoffset="-55"></circle>
+                                    <!-- Center Text -->
+                                    <text x="18" y="19" fill="#fff" font-size="6" font-family="'JetBrains Mono', monospace" font-weight="700" text-anchor="middle" dominant-baseline="central">CFO</text>
+                                </svg>
+                            </div>
+                            <div class="donut-legend">
+                                <div class="legend-item"><div class="legend-dot" style="background: #6366f1"></div>Strategy & Ops</div>
+                                <div class="legend-item"><div class="legend-dot" style="background: #0ea5e9"></div>Corp. Finance</div>
+                                <div class="legend-item"><div class="legend-dot" style="background: #10b981"></div>Fundraising</div>
+                                <div class="legend-item"><div class="legend-dot" style="background: #ec4899"></div>Leadership</div>
+                                <div class="legend-item"><div class="legend-dot" style="background: #f59e0b"></div>Tech & AI</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Professional Experience</h2>
+                <div class="experience-list">
+                    
+                    <!-- Finary -->
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="job-title-group">
+                                <img src="https://www.google.com/s2/favicons?domain=finary.com&sz=128" alt="Finary" class="company-logo">
+                                <div class="job-title-text">
+                                    <div class="company-name">Finary</div>
+                                    <div class="role-title">VP Finance</div>
+                                </div>
+                            </div>
+                            <div class="job-date">03.2026 – Present</div>
+                        </div>
+                        <div class="company-desc">€10M ARR Fintech scale-up (70 employees)</div>
+                        <ul>
+                            <li>Spearheaded a <strong>25% reduction</strong> in recurring cost base through rigorous vendor renegotiation.</li>
+                            <li>Engineered <strong>AI-powered finance dashboards</strong> and automated workflows for real-time decision-making.</li>
+                            <li>Reforecasted entire top and bottom line within a 30-day window, introducing granular allocation keys.</li>
+                            <li>Led the implementation of <strong>Pennylane</strong> while optimizing global treasury operations.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Flowdesk -->
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="job-title-group">
+                                <img src="https://www.google.com/s2/favicons?domain=flowdesk.co&sz=128" alt="Flowdesk" class="company-logo">
+                                <div class="job-title-text">
+                                    <div class="company-name">Flowdesk</div>
+                                    <div class="role-title">Head of Finance</div>
+                                </div>
+                            </div>
+                            <div class="job-date">03.2023 – 12.2025</div>
+                        </div>
+                        <div class="company-desc">Fast-growing crypto-financial services provider</div>
+                        <ul>
+                            <li>Orchestrated financial due diligence for a <strong>$100M Series B equity raise</strong> and secured venture debt.</li>
+                            <li>Scaled the finance department, supporting rapid company growth from <strong>30 to 200 employees</strong>, and managed a team of up to 8 collaborators.</li>
+                            <li>Managed complex international treasury (fiat and crypto) ensuring multi-GAAP compliance (FR, SG, US).</li>
+                            <li>Directed the end-to-end implementation of <strong>NetSuite ERP</strong> to drive global scalability.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Blockchain@HEC -->
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="job-title-group">
+                                <img src="hec.png" alt="Blockchain@HEC" class="company-logo">
+                                <div class="job-title-text">
+                                    <div class="company-name">Blockchain@HEC</div>
+                                    <div class="role-title">Investor Relations Manager</div>
+                                </div>
+                            </div>
+                            <div class="job-date">01.2022 – 03.2023</div>
+                        </div>
+                        <div class="company-desc">Professional association dedicated to educating and connecting the blockchain / crypto ecosystem.</div>
+                        <ul>
+                            <li>Developed and maintained relationships with current and potential investors.</li>
+                            <li>Coordinated investor meetings, monitored market trends, and developed IR strategies.</li>
+                            <li>Bridged HEC alumni and students across 4 hubs (Paris, London, Dubai, Hong Kong) via events, analysis, and labs.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Vokko -->
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="job-title-group">
+                                <img src="vokko.jpg" alt="Vokko" class="company-logo">
+                                <div class="job-title-text">
+                                    <div class="company-name">Vokko</div>
+                                    <div class="role-title">Chief Financial Officer</div>
+                                </div>
+                            </div>
+                            <div class="job-date">12.2021 – 12.2022</div>
+                        </div>
+                        <ul>
+                            <li>Designed and executed the core financial roadmap, establishing robust forecasting and reporting systems.</li>
+                            <li>Acted as the primary strategic partner to the Founder/CEO, managing relations with investors and auditors.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Private Investor -->
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="job-title-group">
+                                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230ea5e9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M3 3v18h18'/><path d='M18 9l-5 5-4-4-5 5'/><circle cx='18' cy='9' r='2' fill='%2310b981' stroke='%2310b981'/></svg>" alt="Tech Startups" class="company-logo">
+                                <div class="job-title-text">
+                                    <div class="company-name">Tech Startups</div>
+                                    <div class="role-title">Private Investor & Fundraiser</div>
+                                </div>
+                            </div>
+                            <div class="job-date">01.2019 – Present</div>
+                        </div>
+                        <div class="company-desc">Early-stage Tech and FinTech Investor.</div>
+                        <ul>
+                            <li>Conducted financial analysis, valuation (DCF, comparables), and due diligence on potential investments.</li>
+                            <li>Advised portfolio companies on business models and investment committee preparations.</li>
+                            <li><strong>Shareholder in:</strong> Unipile, Ledger, MyEasyFarm, Spash, October, MyLovelyPlanet, Squadeasy, Evora Bioscience, Sismo, Adok, Hoverseen, Sensivic, Upcyclea, Watiz.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Societe Generale -->
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="job-title-group">
+                                <img src="https://www.google.com/s2/favicons?domain=societegenerale.com&sz=128" alt="Société Générale" class="company-logo">
+                                <div class="job-title-text">
+                                    <div class="company-name">Société Générale CIB</div>
+                                    <div class="role-title">Director & VP</div>
+                                </div>
+                            </div>
+                            <div class="job-date">2006 – 2021</div>
+                        </div>
+                        <div class="company-desc">Successive global leadership roles in New York and Paris</div>
+                        <ul>
+                            <li>Directed the <strong>€200M FRTB program</strong>, leading a cross-functional organization of 100+ global stakeholders and directly managing up to 30 collaborators.</li>
+                            <li>Achieved a <strong>30% OPEX reduction</strong> over 3 years via strategic offshoring and organizational restructuring.</li>
+                            <li>Reduced daily workload by 25% through <strong>self-taught Python</strong> and IT automation initiatives.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Semaphores -->
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="job-title-group">
+                                <img src="semaphores.jpg" alt="Semaphores" class="company-logo">
+                                <div class="job-title-text">
+                                    <div class="company-name">Semaphores Expertise</div>
+                                    <div class="role-title">Financial Auditor & Accountant</div>
+                                </div>
+                            </div>
+                            <div class="job-date">09.2003 – 11.2006</div>
+                        </div>
+                        <div class="company-desc">Cabinet d'audit et d'expertise comptable (Montpellier, France).</div>
+                        <ul>
+                            <li>Built a solid foundation in accounting, auditing standards, and financial reporting.</li>
+                            <li>Executed financial audits and ensured strict compliance with regulatory frameworks.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+            <section>
+                <h2>Education & Communities</h2>
+                <div class="edu-grid">
+                    <div class="edu-card">
+                        <div class="edu-type">Degree</div>
+                        <div class="edu-school">HEC Paris</div>
+                        <div class="edu-degree">Executive Master of Science Innovation & Entrepreneurship</div>
+                    </div>
+                    <div class="edu-card">
+                        <div class="edu-type">Certificate</div>
+                        <div class="edu-school">Columbia Business School</div>
+                        <div class="edu-degree">Executive Leadership Program (New York)</div>
+                    </div>
+                    <div class="edu-card">
+                        <div class="edu-type">Certification</div>
+                        <div class="edu-school">HEC Paris</div>
+                        <div class="edu-degree">Private Equity and Venture Capital</div>
+                    </div>
+                    <div class="edu-card">
+                        <div class="edu-type">Certification</div>
+                        <div class="edu-school">HEC Paris</div>
+                        <div class="edu-degree">Entrepreneurial Finance</div>
+                    </div>
+                    <div class="edu-card">
+                        <div class="edu-type">Certification</div>
+                        <div class="edu-school">AMF</div>
+                        <div class="edu-degree">Autorité des marchés financiers (AMF) Certification</div>
+                    </div>
+                    <div class="edu-card">
+                        <div class="edu-type">Communities</div>
+                        <div class="edu-school">Tech & Finance</div>
+                        <div class="edu-degree">French Tech 120 CFO Club, France Digitale CFO Club</div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
