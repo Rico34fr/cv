@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eric Olombel - Resume</title>
-    <meta name="description" content="Eric Olombel — CFO / VP Finance. 20+ years scaling finance functions in fintech, SaaS and investment banking (Paris & New York).">
+    <meta name="description" content="Eric Olombel — Finance Director · Interim CFO · Finance Transformation. 20+ years across audit, investment banking and fintech scale-ups.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%230ea5e9'/%3E%3Cstop offset='100%25' stop-color='%2310b981'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230b0f19'/%3E%3Ctext x='32' y='40' font-family='Arial,sans-serif' font-size='26' font-weight='800' fill='url(%23g)' text-anchor='middle'%3EEO%3C/text%3E%3C/svg%3E">
     <meta property="og:title" content="Eric Olombel - Resume">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rico34fr.github.io/cv/">
-    <meta property="og:image" content="https://rico34fr.github.io/cv/photo.jpg">
-    <meta property="og:description" content="Chief Financial Officer — fintech & SaaS scale-ups. Watch the showreel and browse the resume.">
+    <meta property="og:image" content="https://rico34fr.github.io/cv/showreel-poster.jpg">
+    <meta property="og:video" content="https://rico34fr.github.io/cv/showreel.mp4">
+    <meta property="og:video:type" content="video/mp4">
+    <meta property="og:description" content="Finance Director · Interim CFO · Finance Transformation. Watch the showreel and browse the resume.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -330,20 +332,21 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            gap: 14px;
+            justify-content: flex-end;
+            padding-bottom: 7%;
+            gap: 10px;
             border: 0;
             cursor: pointer;
             color: var(--text-main);
             font-family: inherit;
             background:
-                radial-gradient(circle at center, rgba(11, 15, 25, 0.15), rgba(11, 15, 25, 0.75)),
-                url('photo.jpg') center 30% / cover no-repeat;
+                radial-gradient(circle at center, rgba(11, 15, 25, 0.05), rgba(11, 15, 25, 0.55)),
+                url('showreel-poster.jpg') center / cover no-repeat;
         }
 
         .play-overlay .play-btn {
-            width: 78px;
-            height: 78px;
+            width: 64px;
+            height: 64px;
             border-radius: 50%;
             display: grid;
             place-items: center;
@@ -823,9 +826,16 @@
         .sub-role {
             font-size: 0.8rem;
             font-family: 'JetBrains Mono', monospace;
-            color: var(--text-main);
-            opacity: 0.85;
-            margin: 6px 0 4px;
+            color: var(--accent-emerald);
+            margin: 22px 0 10px;
+        }
+
+        .company-desc + .sub-role {
+            margin-top: 0;
+        }
+
+        .sub-muted {
+            color: var(--text-muted);
         }
 
         /* EDUCATION */
@@ -947,7 +957,7 @@
             </a>
             <div class="nav-links">
                 <a href="#showreel">Showreel</a>
-                <a href="#impact">Impact</a>
+                <a href="#impact">Results</a>
                 <a href="#experience">Experience</a>
                 <a href="#education">Education</a>
             </div>
@@ -959,16 +969,16 @@
     <header class="hero" id="top">
         <div class="wrap">
             <div class="hero-text">
-                <div class="status-pill"><span class="status-dot"></span>Open to CFO opportunities · Paris</div>
+                <div class="status-pill"><span class="status-dot"></span>Available · Interim CFO &amp; transformation missions</div>
                 <div class="identity">
                     <img src="photo.jpg" alt="Eric Olombel" class="profile-pic">
                     <div>
                         <h1>Eric Olombel</h1>
-                        <div class="subtitle">Chief Financial Officer</div>
+                        <div class="subtitle">Finance Director · Interim CFO</div>
                     </div>
                 </div>
                 <p class="pitch">
-                    Finance executive with <span class="highlight">20+ years</span> across fintech scale-ups and investment banking (Paris &amp; New York). I build <span class="highlight">tech-enabled finance functions</span>, lead fundraising <span class="highlight">($100M Series B)</span> and turn numbers into decisions for founders, boards and investors.
+                    <span class="highlight">Finance transformation</span> leader with 20+ years across audit, investment banking (Société Générale CIB) and VC-backed fintech scale-ups. I redesign finance functions end to end: <span class="highlight">close &amp; reporting, multi-GAAP consolidation, ERP, controls</span> and <span class="highlight">AI across finance teams</span>.
                 </p>
                 <div class="hero-ctas">
                     <a href="#showreel" class="btn btn-primary" id="watchBtn">▶ Watch the showreel</a>
@@ -980,9 +990,9 @@
             <div class="video-col" id="showreel">
                 <div class="video-card">
                     <div class="video-inner">
-                        <div class="video-label"><span><b>●</b>&nbsp; Resume showreel</span><span>Eric Olombel</span></div>
+                        <div class="video-label"><span><b>●</b>&nbsp; Showreel · Finance × AI</span><span>0:47</span></div>
                         <div class="video-slot" id="videoSlot">
-                            <video class="showreel" id="showreel-video" controls playsinline preload="metadata">
+                            <video class="showreel" id="showreel-video" controls playsinline preload="metadata" poster="showreel-poster.jpg">
                                 <source src="showreel.mp4" type="video/mp4">
                             </video>
                             <button type="button" class="play-overlay" id="playOverlay" aria-label="Play the showreel">
@@ -992,8 +1002,8 @@
                                 <span class="play-txt">Play the showreel</span>
                             </button>
                             <div class="video-fallback">
-                                <strong style="color: var(--text-main);">Showreel coming soon</strong>
-                                <span>Meanwhile, scroll down to browse the full resume.</span>
+                                <strong style="color: var(--text-main);">Showreel unavailable</strong>
+                                <span>Scroll down to browse the full resume.</span>
                             </div>
                         </div>
                     </div>
@@ -1003,29 +1013,29 @@
     </header>
     <button type="button" class="dock-close" id="dockClose" aria-label="Close mini player">✕</button>
 
-    <!-- KEY FIGURES -->
+    <!-- KEY RESULTS -->
     <section class="kpis" id="impact">
         <div class="wrap">
             <div class="kpi-grid">
                 <div class="kpi">
-                    <div class="kpi-val">$100M</div>
-                    <div class="kpi-lbl">Series B equity raise + venture debt (Flowdesk)</div>
-                </div>
-                <div class="kpi">
-                    <div class="kpi-val">30 → 200</div>
-                    <div class="kpi-lbl">Headcount growth supported by a scaled finance team</div>
+                    <div class="kpi-val">&lt;7 days</div>
+                    <div class="kpi-lbl">Month-end close (from 15), via process redesign and AI</div>
                 </div>
                 <div class="kpi">
                     <div class="kpi-val">-25%</div>
-                    <div class="kpi-lbl">Recurring cost base reduction (Finary)</div>
+                    <div class="kpi-lbl">Recurring costs, with AI-driven contract analysis</div>
                 </div>
                 <div class="kpi">
-                    <div class="kpi-val">€200M</div>
-                    <div class="kpi-lbl">FRTB regulatory program, 100+ stakeholders (SG CIB)</div>
+                    <div class="kpi-val">-30%</div>
+                    <div class="kpi-lbl">OPEX over 3 years at Société Générale CIB</div>
                 </div>
                 <div class="kpi">
-                    <div class="kpi-val">€35B</div>
-                    <div class="kpi-lbl">Legacy assets monitored through the 2008 crisis</div>
+                    <div class="kpi-val">5</div>
+                    <div class="kpi-lbl">Countries in multi-GAAP group consolidation</div>
+                </div>
+                <div class="kpi">
+                    <div class="kpi-val">2 ERPs</div>
+                    <div class="kpi-lbl">NetSuite and Pennylane implementations</div>
                 </div>
             </div>
         </div>
@@ -1046,29 +1056,46 @@
             </div>
 
             <div class="side-card">
-                <div class="side-title">Tools &amp; Systems</div>
+                <div class="side-title">AI</div>
+                <div class="tags">
+                    <span class="tag">Claude</span>
+                    <span class="tag">ChatGPT</span>
+                    <span class="tag">Copilot</span>
+                    <span class="tag">Dust</span>
+                    <span class="tag">Hermes</span>
+                    <span class="tag">MCP connectors</span>
+                </div>
+                <div class="side-title" style="margin-top: 16px;">ERP &amp; Data</div>
                 <div class="tags">
                     <span class="tag">NetSuite</span>
                     <span class="tag">Pennylane</span>
-                    <span class="tag">Salesforce</span>
                     <span class="tag">Python</span>
-                    <span class="tag">LLMs / Claude</span>
-                    <span class="tag">AI dashboards</span>
+                    <span class="tag">Power BI</span>
+                    <span class="tag">Excel</span>
                 </div>
             </div>
 
             <div class="side-card">
                 <div class="side-title">Languages</div>
                 <div class="lang-row"><b>French</b> Native</div>
-                <div class="lang-row"><b>English</b> Fluent</div>
+                <div class="lang-row"><b>English</b> Fluent · 5 yrs in NY</div>
             </div>
 
             <div class="side-card">
-                <div class="side-title">Beyond work</div>
+                <div class="side-title">Communities</div>
                 <div class="tags">
-                    <span class="tag">Startup investor</span>
-                    <span class="tag">Diving &amp; ocean travel</span>
-                    <span class="tag">50+ countries</span>
+                    <span class="tag">French Tech 120 CFO Club</span>
+                    <span class="tag">France Digitale CFO Club</span>
+                    <span class="tag">SG Talent · 10 yrs</span>
+                </div>
+            </div>
+
+            <div class="side-card">
+                <div class="side-title">Interests</div>
+                <div class="tags">
+                    <span class="tag">Travel · 50+ countries</span>
+                    <span class="tag">Scuba diving · PADI Deep</span>
+                    <span class="tag">Padel</span>
                 </div>
             </div>
         </aside>
@@ -1079,7 +1106,7 @@
             <section class="block">
                 <h2>Profile</h2>
                 <p class="summary">
-                    High-impact finance executive who has spent the last five years as CFO, Head of Finance and VP Finance of Paris-based fintech and SaaS scale-ups, after 15 years at <span class="highlight">Société Générale CIB</span> in Paris and New York. I structure lean finance teams, rebuild budgets and forecasts, secure funding (equity, venture debt, subsidies and tax credits) and deploy <span class="highlight">AI-powered dashboards</span>, robust ERPs and multi-entity treasury for international hyper-growth.
+                    Finance Director and interim CFO with 20+ years across audit practice, investment banking (<span class="highlight">Société Générale CIB</span>) and VC-backed fintech scale-ups, now focused on <span class="highlight">finance transformation missions</span>: end-to-end redesign of finance functions, covering closing and reporting processes, multi-GAAP group consolidation, ERP implementations (NetSuite, Pennylane), controls and governance, and the deployment of <span class="highlight">AI across finance teams</span>. Hands-on IFRS experience and multi-entity scope across France, the UK, the UAE, Singapore and the US. Delivers measurable results quickly alongside existing teams; trusted partner to CEOs, boards, investors, lenders and statutory auditors.
                 </p>
             </section>
 
@@ -1087,28 +1114,36 @@
                 <h2>Core Competencies</h2>
                 <div class="skills-grid">
                     <div class="skill-card">
-                        <div class="skill-cat">Financial Control &amp; FP&amp;A</div>
-                        <div class="skill-val">Budget, rolling forecast, allocation keys, board reporting</div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-cat">Corporate Finance &amp; Fundraising</div>
-                        <div class="skill-val">VC relations (Series B), venture debt, due diligence, BPI</div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-cat">Treasury</div>
-                        <div class="skill-val">Cash management, fiat &amp; crypto, multi-entity FR / SG / US</div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-cat">Reporting &amp; Compliance</div>
-                        <div class="skill-val">Multi-GAAP, regulatory reporting, audits, CIR/CII, JEI</div>
+                        <div class="skill-cat">Finance Transformation</div>
+                        <div class="skill-val">Process redesign, close acceleration, finance function design &amp; scaling, cost optimization</div>
                     </div>
                     <div class="skill-card">
                         <div class="skill-cat">AI &amp; Automation</div>
-                        <div class="skill-val">LLM workflows, Python, real-time finance dashboards</div>
+                        <div class="skill-val">Expert agents, workflow automation, AI-to-ERP connectors (MCP), KPI dashboards</div>
                     </div>
                     <div class="skill-card">
-                        <div class="skill-cat">Leadership</div>
-                        <div class="skill-val">Teams up to 30, cost reduction, international scale-up</div>
+                        <div class="skill-cat">Group Reporting &amp; Consolidation</div>
+                        <div class="skill-val">Monthly / quarterly / annual closings, multi-entity consolidation, intercompany, transfer pricing</div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-cat">Controls &amp; Governance</div>
+                        <div class="skill-val">Closing procedures, segregation of duties, delegations of authority, RACI, purchase approvals</div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-cat">Accounting Standards</div>
+                        <div class="skill-val">French GAAP, IFRS (financial instruments), US GAAP, UK GAAP, Singapore GAAP</div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-cat">Treasury &amp; FP&amp;A</div>
+                        <div class="skill-val">Multi-entity cash, banking relationships, venture debt, budgeting, reforecasting, KPIs</div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-cat">Stakeholders</div>
+                        <div class="skill-val">Statutory auditors, advisory firms, boards, investors, banks and lenders</div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-cat">Regulatory</div>
+                        <div class="skill-val">AMF supervision, PSAN / PSCA under MiCA, FED and ECB regulatory exams</div>
                     </div>
                 </div>
             </section>
@@ -1124,17 +1159,18 @@
                                 <img src="https://www.google.com/s2/favicons?domain=finary.com&sz=128" alt="Finary" class="company-logo">
                                 <div class="job-title-text">
                                     <div class="company-name">Finary</div>
-                                    <div class="role-title">VP Finance</div>
+                                    <div class="role-title">VP Finance (CFO scope)</div>
                                 </div>
                             </div>
-                            <div class="job-date">03.2026 – 2026</div>
+                            <div class="job-date">03.2026 – 07.2026</div>
                         </div>
-                        <div class="company-desc">Wealth-management fintech scale-up (SaaS, 80 people) · Paris</div>
+                        <div class="company-desc">Regulated wealth-management fintech, 80 employees · France and US entities · PSI and PSCA (MiCA) licensed · right hand to the CEO</div>
                         <ul>
-                            <li>Structured the finance function with a lean team; <strong>rebuilt the group budget by product line</strong> through granular allocation keys.</li>
-                            <li>Spearheaded a <strong>25% reduction in the recurring cost base</strong> through vendor renegotiation and staffing cost optimization.</li>
-                            <li>Overhauled cash-flow management (<strong>€20M treasury</strong>) and led the Pennylane accounting implementation.</li>
-                            <li>Engineered in-house <strong>AI-powered dashboards</strong> and automated workflows for real-time decision-making.</li>
+                            <li>Redesigned the closing process and <strong>cut the month-end close from 15 to under 7 days</strong>: new closing procedures, Pennylane connected to Claude via MCP, and AI used to remove operational bottlenecks.</li>
+                            <li>Built the <strong>finance governance framework</strong>: segregation of duties, delegations of authority, RACI and an AI-assisted vendor due diligence workflow (IT, Legal, Finance and Compliance sign-off).</li>
+                            <li><strong>Cut recurring costs by 25%</strong> (AI-driven contract analysis, vendor renegotiation) and the hiring plan and staffing costs by 25% vs. budget; rebuilt the budget by product line.</li>
+                            <li>Deployed <strong>AI across finance processes</strong>: expert agents for accounting, FP&amp;A, treasury, tax and corporate, a real-time KPI dashboard and a cash-flow tracking tool.</li>
+                            <li>Owned group reporting, the statutory auditor relationship, banking relationships and <strong>€20M in treasury</strong>.</li>
                         </ul>
                     </div>
 
@@ -1150,12 +1186,15 @@
                             </div>
                             <div class="job-date">03.2023 – 12.2025</div>
                         </div>
-                        <div class="company-desc">Crypto market-making &amp; financial infrastructure · Paris, Singapore, US</div>
+                        <div class="company-desc">Crypto market maker and financial services group · entities in France, UK, UAE, Singapore and US · PSAN-registered, AMF supervision</div>
                         <ul>
-                            <li>Orchestrated financial due diligence for the <strong>$100M Series B equity raise</strong> and secured venture debt (investor relations, financial KPIs).</li>
-                            <li>Scaled the finance department through company growth <strong>from 30 to 200 employees</strong>, managing a team of up to 8.</li>
-                            <li>Managed international treasury (fiat &amp; crypto) with <strong>multi-GAAP compliance</strong> (FR, SG, US).</li>
-                            <li>Directed the end-to-end <strong>NetSuite ERP</strong> implementation; secured subsidies &amp; tax credits (CIR/CII, JEI, BPI).</li>
+                            <li>Scaled the finance function through hyper-growth <strong>from 30 to 200 employees</strong>, building and leading a team of up to 8.</li>
+                            <li>Directed the end-to-end <strong>NetSuite ERP</strong> implementation to support multi-entity scalability.</li>
+                            <li>Led monthly, quarterly and annual closings and the <strong>group consolidation across 5 jurisdictions</strong> under French, US, UK and Singapore GAAP.</li>
+                            <li>Managed intercompany accounts and transfer pricing with statutory auditors and advisory firms; mapped accounting flows for complex crypto-asset operations.</li>
+                            <li>Automated treasury monitoring and investor reporting with AI-based tools; oversaw multi-entity treasury (fiat and crypto), banking relationships and <strong>BlackRock venture debt</strong> reporting.</li>
+                            <li>Led the financial due diligence for a <strong>$100M Series B</strong>; built KPI, OKR and investor reporting for management and the board.</li>
+                            <li>Secured subsidies and tax credits (CIR/CII, JEI, Bpifrance).</li>
                         </ul>
                     </div>
 
@@ -1166,15 +1205,14 @@
                                 <img src="vokko.jpg" alt="Vokko" class="company-logo">
                                 <div class="job-title-text">
                                     <div class="company-name">Vokko</div>
-                                    <div class="role-title">Chief Financial Officer</div>
+                                    <div class="role-title">Co-founder &amp; CFO</div>
                                 </div>
                             </div>
                             <div class="job-date">12.2021 – 12.2022</div>
                         </div>
-                        <div class="company-desc">Early-stage civic-tech startup (electronic voting) · Paris</div>
+                        <div class="company-desc">Start-up co-founded during the HEC Paris Executive Master · Paris</div>
                         <ul>
-                            <li>Designed and executed the core financial roadmap, establishing <strong>forecasting and reporting systems from scratch</strong>.</li>
-                            <li>Primary strategic partner to the Founder/CEO, managing relations with investors and auditors.</li>
+                            <li>Designed the financial roadmap, set up forecasting and reporting, and managed relations with investors and auditors.</li>
                         </ul>
                     </div>
 
@@ -1190,13 +1228,33 @@
                             </div>
                             <div class="job-date">2006 – 2021</div>
                         </div>
-                        <div class="company-desc">Corporate &amp; investment bank · New York &amp; Paris</div>
+                        <div class="company-desc">New York &amp; Paris · French GAAP and IFRS, including fair-value measurement of financial instruments</div>
+
+                        <div class="sub-role">Director · Program Manager, FRTB · Paris · 2020 – 2021</div>
                         <ul>
-                            <li><strong>Head of Market Risks &amp; P&amp;L, New York:</strong> led up to 25 financial engineers supervising equity traders (stress tests, VaR/SVaR, sensitivities, P&amp;L certification).</li>
-                            <li>Financial analysis, forecasting and reporting to US top management (<strong>$300M revenues</strong>); referent for FED and ECB regulatory exams.</li>
-                            <li>Achieved a <strong>30% OPEX reduction</strong> over 3 years via strategic offshoring; cut daily workload by 25% through self-taught Python &amp; IT automation.</li>
-                            <li><strong>Head of Experts market control team, Paris:</strong> managed 30 senior experts &amp; financial analysts; monitored <strong>€35B notional</strong> of legacy assets through the 2008 crisis.</li>
-                            <li>Directed the <strong>€200M FRTB regulatory program</strong>, leading a cross-functional organization of 100+ global stakeholders.</li>
+                            <li>Directed the <strong>€200M Fundamental Review of the Trading Book</strong> regulatory transformation program, leading a cross-functional organization of 100+ global stakeholders.</li>
+                        </ul>
+
+                        <div class="sub-role sub-muted">Sabbatical · mid-2019 to 2020</div>
+
+                        <div class="sub-role">Director · Head of Market Risks &amp; P&amp;L · New York · 2015 – 2019</div>
+                        <ul>
+                            <li>Led a team of around 20 financial engineers certifying P&amp;L, income attribution, VaR/SVaR, stress tests and sensitivities for equity trading.</li>
+                            <li>Delivered financial analysis, forecasting and reporting to US top management (<strong>$300M revenues</strong>).</li>
+                            <li>Achieved a <strong>30% OPEX reduction</strong> over 3 years through offshoring and organizational restructuring.</li>
+                            <li>Cut daily workload by 25% through self-taught Python and IT automation, at no extra cost.</li>
+                            <li>Referent for <strong>FED and ECB regulatory exams</strong>, providing certified and analyzed data.</li>
+                        </ul>
+
+                        <div class="sub-role">Vice President · Head of Experts Market Control Team · Paris · 2012 – 2015</div>
+                        <ul>
+                            <li>Managed a global team of <strong>30 senior experts</strong> and financial analysts within the control function.</li>
+                            <li>Led the business line's key projects: ECB Asset Quality Review, offshoring and cost savings, booking and valuation tools.</li>
+                        </ul>
+
+                        <div class="sub-role">Financial Controller · Legacy Assets · Paris · 2006 – 2012</div>
+                        <ul>
+                            <li>Analyzed, controlled and reported on <strong>€35B notional</strong> in assets (bonds, IRS, CDS, loans) through the Lehman Brothers and subprime crisis.</li>
                         </ul>
                     </div>
 
@@ -1207,14 +1265,15 @@
                                 <img src="semaphores.jpg" alt="Semaphores" class="company-logo">
                                 <div class="job-title-text">
                                     <div class="company-name">Semaphores Expertise</div>
-                                    <div class="role-title">Financial Auditor &amp; Accountant</div>
+                                    <div class="role-title">Accountant &amp; Financial Auditor</div>
                                 </div>
                             </div>
                             <div class="job-date">09.2003 – 11.2006</div>
                         </div>
-                        <div class="company-desc">Audit &amp; chartered accounting firm · Montpellier</div>
+                        <div class="company-desc">Chartered accounting and audit firm · Montpellier</div>
                         <ul>
-                            <li>Built a solid foundation in accounting, auditing standards and financial reporting; executed financial audits with strict regulatory compliance.</li>
+                            <li>Prepared bookkeeping and statutory annual accounts for SMEs and groups of several hundred employees.</li>
+                            <li>Executed financial audits in compliance with professional and regulatory standards.</li>
                         </ul>
                     </div>
 
@@ -1222,22 +1281,21 @@
             </section>
 
             <section class="block">
-                <h2>Investing &amp; Ecosystem</h2>
+                <h2>Investing &amp; Volunteering</h2>
                 <div class="experience-list">
                     <div class="job-card">
                         <div class="job-header">
                             <div class="job-title-group">
                                 <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230ea5e9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M3 3v18h18'/><path d='M18 9l-5 5-4-4-5 5'/><circle cx='18' cy='9' r='2' fill='%2310b981' stroke='%2310b981'/></svg>" alt="" class="company-logo">
                                 <div class="job-title-text">
-                                    <div class="company-name">Tech &amp; Fintech Startups</div>
-                                    <div class="role-title">Private Investor &amp; Fundraiser</div>
+                                    <div class="company-name">Early-stage Tech &amp; FinTech</div>
+                                    <div class="role-title">Private Investor</div>
                                 </div>
                             </div>
-                            <div class="job-date">2019 – Present</div>
+                            <div class="job-date">01.2019 – Present</div>
                         </div>
                         <ul>
-                            <li>Financial analysis, valuation (DCF, comparables) and due diligence on early-stage deals; advise founders on business models and investment committees.</li>
-                            <li><strong>Shareholder in:</strong> Unipile, Ledger, MyEasyFarm, Spash, October, MyLovelyPlanet, Squadeasy, Evora Bioscience, Sismo, Adok, Hoverseen, Sensivic, Upcyclea, Watiz.</li>
+                            <li>Financial analysis, valuation and due diligence on <strong>14+ investments</strong> (including Ledger, Unipile, October); advisory to portfolio companies.</li>
                         </ul>
                     </div>
 
@@ -1246,26 +1304,26 @@
                             <div class="job-title-group">
                                 <img src="hec.png" alt="Blockchain@HEC" class="company-logo">
                                 <div class="job-title-text">
-                                    <div class="company-name">Blockchain@HEC</div>
-                                    <div class="role-title">Investor Relations Manager</div>
+                                    <div class="company-name">Blockchain@HEC Association</div>
+                                    <div class="role-title">Investor Relations Manager (volunteer)</div>
                                 </div>
                             </div>
-                            <div class="job-date">01.2022 – 03.2023</div>
+                            <div class="job-date">2022 – 2023</div>
                         </div>
                         <ul>
-                            <li>Managed investor relations and IR strategy; connected HEC alumni and students across 4 hubs (Paris, London, Dubai, Hong Kong).</li>
+                            <li>Led the IR strategy across 4 hubs (Paris, London, Dubai, Hong Kong).</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
             <section class="block" id="education">
-                <h2>Education &amp; Communities</h2>
+                <h2>Education &amp; Certifications</h2>
                 <div class="edu-grid">
                     <div class="edu-card">
                         <div class="edu-type">Degree · 2022</div>
                         <div class="edu-school">HEC Paris</div>
-                        <div class="edu-degree">Executive MSc Innovation &amp; Entrepreneurship</div>
+                        <div class="edu-degree">Executive Master of Science, Innovation &amp; Entrepreneurship · Certifications: Private Equity &amp; Venture Capital, Entrepreneurial Finance</div>
                     </div>
                     <div class="edu-card">
                         <div class="edu-type">Executive program · 2018</div>
@@ -1273,24 +1331,24 @@
                         <div class="edu-degree">Executive Leadership Program (New York)</div>
                     </div>
                     <div class="edu-card">
+                        <div class="edu-type">AI certification · 2026</div>
+                        <div class="edu-school">Anthropic Academy</div>
+                        <div class="edu-degree">Claude 101 · AI Fluency: Framework &amp; Foundations (further courses in progress)</div>
+                    </div>
+                    <div class="edu-card">
+                        <div class="edu-type">Certification · 2021</div>
+                        <div class="edu-school">AMF</div>
+                        <div class="edu-degree">Autorité des Marchés Financiers Certification</div>
+                    </div>
+                    <div class="edu-card">
                         <div class="edu-type">Degree · 2006</div>
                         <div class="edu-school">Montpellier Business School</div>
-                        <div class="edu-degree">Master's in Finance &amp; Business Management</div>
+                        <div class="edu-degree">Master's Degree in Finance &amp; Business Management, major in Accounting &amp; Management Control</div>
                     </div>
                     <div class="edu-card">
-                        <div class="edu-type">Certifications</div>
-                        <div class="edu-school">HEC Paris · AMF</div>
-                        <div class="edu-degree">Private Equity &amp; Venture Capital · Entrepreneurial Finance · AMF Certification (2021)</div>
-                    </div>
-                    <div class="edu-card">
-                        <div class="edu-type">CFO Communities</div>
-                        <div class="edu-school">French Tech 120 · France Digitale</div>
-                        <div class="edu-degree">French Tech 120 CFO Club (2024–25) · France Digitale CFO Club (2023–25)</div>
-                    </div>
-                    <div class="edu-card">
-                        <div class="edu-type">Recognition</div>
-                        <div class="edu-school">Société Générale</div>
-                        <div class="edu-degree">SG Talent program member for 10 years</div>
+                        <div class="edu-type">Degree · 2003</div>
+                        <div class="edu-school">IUT Montpellier</div>
+                        <div class="edu-degree">DUT GEA (Business Administration), Accounting &amp; Finance</div>
                     </div>
                 </div>
             </section>
