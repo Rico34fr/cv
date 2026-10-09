@@ -993,7 +993,7 @@
                         <div class="video-label"><span><b>●</b>&nbsp; Showreel · Finance × AI</span><span>0:47</span></div>
                         <div class="video-slot" id="videoSlot">
                             <video class="showreel" id="showreel-video" controls playsinline preload="metadata" poster="showreel-poster.jpg">
-                                <source src="showreel.mp4" type="video/mp4">
+                                <source src="showreel.mp4" type="video/mp4" onerror="this.parentNode.parentNode.classList.add('no-video')">
                             </video>
                             <button type="button" class="play-overlay" id="playOverlay" aria-label="Play the showreel">
                                 <span class="play-btn">
@@ -1002,8 +1002,8 @@
                                 <span class="play-txt">Play the showreel</span>
                             </button>
                             <div class="video-fallback">
-                                <strong style="color: var(--text-main);">Showreel unavailable</strong>
-                                <span>Scroll down to browse the full resume.</span>
+                                <strong style="color: var(--text-main);">The showreel could not load here</strong>
+                                <span><a href="showreel.mp4" target="_blank" rel="noopener" style="color: var(--accent-cyan);">Open the video directly</a> or scroll down to browse the full resume.</span>
                             </div>
                         </div>
                     </div>
@@ -1370,20 +1370,11 @@
             var overlay = document.getElementById('playOverlay');
             var closeBtn = document.getElementById('dockClose');
             var watchBtn = document.getElementById('watchBtn');
-            var source = video.querySelector('source');
             var dismissed = false;
             var inView = true;
 
-            function showFallback() {
-                slot.classList.add('no-video');
-                undock();
-            }
-
-            // If showreel.mp4 is missing, show a clean placeholder instead of a broken player
-            source.addEventListener('error', showFallback);
-            video.addEventListener('error', showFallback);
-            // The load error may have fired before this script ran
-            if (video.networkState === 3 || video.error) showFallback();
+            // A real load failure of showreel.mp4 is caught by the onerror attribute on <source>,
+            // which adds .no-video to the slot and swaps in a clean placeholder.
 
             // Adapt the frame to the real video format (16:9, 9:16, 1:1...)
             video.addEventListener('loadedmetadata', function () {
