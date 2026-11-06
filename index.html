@@ -111,12 +111,24 @@ p { margin: 0; text-wrap: pretty; }
 .foot a { color: var(--on-navy); text-decoration: none; display: inline-flex; gap: 10px; align-items: center; }
 .foot a:hover { color: var(--gold); }
 
+/* Showreel */
+.reel { margin: 28px 0 0; }
+.reel-frame { position: relative; aspect-ratio: 16 / 9; background: var(--navy); border-radius: 12px; overflow: hidden; box-shadow: 0 0 0 1px rgba(216, 178, 96, 0.28), 0 28px 60px -34px rgba(10, 21, 48, 0.7); }
+.reel-frame video { width: 100%; height: 100%; display: block; object-fit: cover; background: var(--navy); }
+.reel-play { position: absolute; inset: 0; appearance: none; border: 0; cursor: pointer; display: flex; align-items: flex-end; justify-content: flex-end; padding: 0 4.5% 5.5% 0; background: linear-gradient(180deg, rgba(10,21,48,0) 55%, rgba(10,21,48,0.55)); color: var(--on-navy); font: 600 0.92rem/1.2 var(--sans); }
+.reel-play .disc { width: clamp(52px, 8vw, 72px); aspect-ratio: 1; border-radius: 50%; background: var(--gold); display: grid; place-items: center; transition: transform 0.35s var(--ease), box-shadow 0.5s ease; }
+.reel-play .disc svg { width: 32%; height: 32%; margin-left: 6%; fill: var(--navy); }
+.reel-play:hover .disc { transform: scale(1.06); box-shadow: 0 0 0 12px rgba(216, 178, 96, 0.16); }
+.reel-play[hidden] { display: none; }
+.reel figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; margin-top: 10px; font-size: 0.86rem; color: var(--muted); }
+.reel figcaption b { color: var(--ink); font-weight: 600; }
+
 [hidden] { display: none !important; }
 
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: 0.01ms !important; } }
 
 @media print {
-  .bar, .foot { display: none; }
+  .bar, .foot, .reel { display: none; }
   body { font-size: 10pt; }
   .head { padding-top: 0; }
   .result { background: none; }
@@ -141,6 +153,18 @@ p { margin: 0; text-wrap: pretty; }
   </div>
 </header>
 
+<figure class="reel" id="reel">
+  <div class="reel-frame">
+    <video id="reel-video" controls playsinline preload="none" poster="showreel-poster.jpg" aria-label="Showreel Finance × IA">
+      <source src="showreel.mp4" type="video/mp4">
+    </video>
+    <button class="reel-play" id="reel-play" type="button" aria-label="Lire le showreel">
+      <span class="disc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.5v15l13-7.5z"/></svg></span>
+    </button>
+  </div>
+  <figcaption><span><b>Showreel · Finance × IA</b> · <span data-i18n="reelCap">en un coup d'œil</span></span><span>0:57</span></figcaption>
+</figure>
+
 <main class="wrap">
 
 <!-- ===================== FR ===================== -->
@@ -161,6 +185,7 @@ p { margin: 0; text-wrap: pretty; }
   </div>
 
   <p class="summary">Directeur financier et CFO de transition avec plus de 20 ans d'expérience entre cabinet d'audit, banque d'investissement (Société Générale CIB) et scale-ups fintech, désormais concentré sur les missions de <b>transformation finance</b> : refonte des process de clôture et de reporting, <b>consolidation groupe multi-GAAP</b>, déploiements d'ERP (NetSuite, Pennylane), contrôles et gouvernance, et déploiement de l'<b>IA dans les équipes finance</b> (Claude, ChatGPT, Dust, Hermes). Pratique de l'<b>IFRS</b> et périmètre multi-entités (France, Royaume-Uni, Émirats arabes unis, Singapour, États-Unis). Résultats mesurables et rapides avec les équipes en place ; partenaire de confiance des CEO, boards, investisseurs, prêteurs et commissaires aux comptes.</p>
+  <div class="reel-slot"></div>
 
   <section class="sec">
     <h2>Résultats clés de transformation</h2>
@@ -314,6 +339,7 @@ p { margin: 0; text-wrap: pretty; }
   </div>
 
   <p class="summary">Finance Director and interim CFO with 20+ years across audit practice, investment banking (Societe Generale CIB) and VC-backed fintech scale-ups, now focused on <b>finance transformation</b> missions: end-to-end redesign of finance functions, covering closing and reporting processes, <b>multi-GAAP group consolidation</b>, ERP implementations (NetSuite, Pennylane), controls and governance, and the deployment of <b>AI across finance teams</b> with Claude, ChatGPT, Dust and Hermes. Hands-on <b>IFRS</b> experience and multi-entity scope across France, the UK, the UAE, Singapore and the US. Delivers measurable results quickly alongside existing teams; trusted partner to CEOs, boards, investors, lenders and statutory auditors.</p>
+  <div class="reel-slot"></div>
 
   <section class="sec">
     <h2>Key transformation results</h2>
@@ -461,8 +487,8 @@ p { margin: 0; text-wrap: pretty; }
 (function () {
   "use strict";
   var T = {
-    fr: { back: "Retour à la présentation", foot: "Découvrir mes offres de conseil", title: "Eric Olombel · CV" },
-    en: { back: "Back to overview", foot: "See my consulting offer", title: "Eric Olombel · Resume" }
+    fr: { back: "Retour à la présentation", foot: "Découvrir mes offres de conseil", title: "Eric Olombel · CV", reelCap: "en un coup d'œil", play: "Lire le showreel", reel: "Showreel Finance × IA" },
+    en: { back: "Back to overview", foot: "See my consulting offer", title: "Eric Olombel · Resume", reelCap: "at a glance", play: "Play the showreel", reel: "Showreel Finance × AI" }
   };
   function store(v) { try { localStorage.setItem("eo-lang", v); } catch (e) {} }
   function read() { try { return localStorage.getItem("eo-lang"); } catch (e) { return null; } }
@@ -473,8 +499,18 @@ p { margin: 0; text-wrap: pretty; }
     if (s === "fr" || s === "en") return s;
     return (navigator.language || "fr").toLowerCase().indexOf("fr") === 0 ? "fr" : "en";
   }
+  var reel = document.getElementById("reel"), reelVideo = document.getElementById("reel-video"), reelPlay = document.getElementById("reel-play");
+  reelVideo.controls = false;
+  function reelStart() { reelPlay.hidden = true; reelVideo.controls = true; }
+  reelPlay.addEventListener("click", function () { reelStart(); var p = reelVideo.play(); if (p && p.catch) p.catch(function () {}); });
+  reelVideo.addEventListener("play", reelStart);
   function setLang(l) {
     document.querySelectorAll("article[data-lang]").forEach(function (a) { a.hidden = a.dataset.lang !== l; });
+    var slot = document.querySelector('article[data-lang="' + l + '"] .reel-slot');
+    if (slot && reel.parentNode !== slot) slot.appendChild(reel);
+    reel.querySelector("figcaption b").textContent = l === "en" ? "Showreel · Finance × AI" : "Showreel · Finance × IA";
+    reelPlay.setAttribute("aria-label", T[l].play);
+    reelVideo.setAttribute("aria-label", T[l].reel);
     document.querySelectorAll("[data-i18n]").forEach(function (el) { el.textContent = T[l][el.dataset.i18n]; });
     document.querySelectorAll(".lang button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.lang === l)); });
     document.querySelectorAll(".js-home").forEach(function (a) { a.href = "/?lang=" + l; });
