@@ -1,747 +1,491 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eric Olombel - Resume</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%230ea5e9'/%3E%3Cstop offset='100%25' stop-color='%2310b981'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230b0f19'/%3E%3Ctext x='32' y='40' font-family='Arial,sans-serif' font-size='26' font-weight='800' fill='url(%23g)' text-anchor='middle'%3EEO%3C/text%3E%3C/svg%3E">
-    <meta property="og:title" content="Eric Olombel - Resume">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://rico34fr.github.io/cv/">
-    <meta property="og:image" content="https://rico34fr.github.io/cv/photo.jpg">
-    <meta property="og:description" content="CFO / VP Finance">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #0b0f19; /* Deep dark blue/black */
-            --card-bg: rgba(30, 41, 59, 0.4);
-            --card-border: rgba(14, 165, 233, 0.15);
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent-cyan: #0ea5e9; /* Tech vibe */
-            --accent-emerald: #10b981; /* Finance vibe */
-            --accent-gradient: linear-gradient(135deg, var(--accent-cyan), var(--accent-emerald));
-            --glow: 0 0 20px rgba(14, 165, 233, 0.2);
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eric Olombel · CV</title>
+<meta name="description" content="Eric Olombel, Directeur financier, CFO de transition, transformation finance et IA. 20 ans d'expérience entre audit, banque d'investissement et fintech.">
+<meta property="og:title" content="Eric Olombel · Resume">
+<meta property="og:description" content="Finance Director · Interim CFO · Finance Transformation. 20+ years across audit, investment banking and fintech.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://rico34fr.github.io/cv/">
+<meta property="og:image" content="https://rico34fr.github.io/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0A1530">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0A1530;
+  --ink: #0E1A36;
+  --body: #39435E;
+  --muted: #5A6480;
+  --gold: #D8B260;
+  --gold-ink: #85661F;
+  --on-navy: #F3F5FA;
+  --on-navy-muted: #AEB8D0;
+  --rule: #E2E6EF;
+  --surface: #F4F6FA;
+  --white: #FFFFFF;
+  --serif: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --sans: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --gutter: clamp(16px, 4vw, 48px);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --z-sticky: 10;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--white); color: var(--body); font-family: var(--sans); font-size: 1rem; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 500; color: var(--ink); margin: 0; text-wrap: balance; }
+p { margin: 0; text-wrap: pretty; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+::selection { background: rgba(216, 178, 96, 0.35); }
+.wrap { max-width: 980px; margin: 0 auto; padding: 0 var(--gutter); }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+/* Top bar */
+.bar { position: sticky; top: 0; z-index: var(--z-sticky); background: var(--navy); }
+.bar .wrap { display: flex; align-items: center; gap: 20px; height: 60px; }
+.back { display: inline-flex; align-items: center; gap: 12px; color: var(--on-navy); text-decoration: none; margin-right: auto; font-size: 0.92rem; }
+.mono { width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--gold); display: grid; place-items: center; font-family: var(--serif); font-size: 0.85rem; color: var(--gold); }
+.back span:last-child { color: var(--on-navy-muted); transition: color 0.2s ease; }
+.back:hover span:last-child { color: var(--gold); }
+.lang { display: inline-flex; border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 3px; }
+.lang button { appearance: none; border: 0; background: transparent; color: var(--on-navy-muted); font: 600 0.76rem/1 var(--sans); letter-spacing: 0.06em; padding: 7px 11px; border-radius: 999px; cursor: pointer; transition: background 0.2s ease, color 0.2s ease; }
+.lang button[aria-pressed="true"] { background: var(--gold); color: var(--navy); }
 
-        body {
-            font-family: 'Outfit', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding: 60px 20px;
-            /* Subtly glowing background orbs */
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(14, 165, 233, 0.08), transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(16, 185, 129, 0.08), transparent 40%);
-            background-attachment: fixed;
-        }
+/* Header */
+.head { padding: clamp(40px, 7vw, 72px) 0 28px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 28px; align-items: center; border-bottom: 2px solid var(--navy); }
+.head h1 { font-size: clamp(2.4rem, 5vw + 0.5rem, 3.8rem); line-height: 1; letter-spacing: -0.02em; font-weight: 600; }
+.title { color: var(--gold-ink); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: clamp(0.78rem, 0.4vw + 0.7rem, 0.92rem); margin-top: 14px; }
+.focus { color: var(--ink); font-weight: 600; font-size: 0.92rem; margin-top: 6px; }
+.contacts { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 14px; font-size: 0.9rem; color: var(--muted); }
+.contacts a { text-decoration: none; }
+.contacts a:hover { color: var(--gold-ink); }
+.photo { width: clamp(96px, 14vw, 132px); height: auto; aspect-ratio: 1; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 3px var(--white), 0 0 0 4px var(--gold); }
+@media (max-width: 600px) { .head { grid-template-columns: 1fr; } .photo { order: -1; } }
 
-        ::selection {
-            background: rgba(14, 165, 233, 0.3);
-            color: #fff;
-        }
+.summary { margin-top: 26px; font-size: 1.02rem; color: var(--body); line-height: 1.7; }
+.summary b { color: var(--ink); font-weight: 600; }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 50px;
-        }
+/* Sections */
+.sec { margin-top: clamp(40px, 6vw, 56px); }
+.sec > h2 { font-size: clamp(1.35rem, 1vw + 1rem, 1.6rem); padding-bottom: 10px; border-bottom: 1px solid var(--rule); margin-bottom: 20px; }
 
-        @media (max-width: 850px) {
-            .container {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-        }
+.results { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.result { background: var(--surface); border-top: 2px solid var(--gold); padding: 14px 14px 16px; border-radius: 0 0 8px 8px; }
+.result b { display: block; font-family: var(--serif); font-weight: 600; color: var(--ink); font-size: 1.5rem; line-height: 1.1; white-space: nowrap; }
+.result span { display: block; color: var(--muted); font-size: 0.82rem; line-height: 1.4; margin-top: 6px; }
+@media (max-width: 760px) { .results { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
-        /* --- SIDEBAR --- */
-        .sidebar {
-            position: sticky;
-            top: 60px;
-            height: fit-content;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
+.skills { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 40px; }
+.skills p { font-size: 0.94rem; }
+.skills b { color: var(--ink); font-weight: 600; }
+.tools { margin-top: 18px; background: var(--surface); border-radius: 8px; padding: 12px 16px; font-size: 0.9rem; }
+.tools b { color: var(--ink); font-weight: 600; }
+@media (max-width: 680px) { .skills { grid-template-columns: 1fr; } }
 
-        @media (max-width: 850px) {
-            .sidebar {
-                position: relative !important;
-                top: 0;
-            }
-        }
+.job { padding: 18px 0; border-top: 1px solid var(--rule); }
+.job:first-of-type { border-top: 0; padding-top: 0; }
+.job-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 16px; }
+.job h3 { font-size: 1.25rem; line-height: 1.3; }
+.job h3 .org { color: var(--gold-ink); }
+.dates { color: var(--muted); font-size: 0.86rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ctx { font-family: var(--serif); font-style: italic; color: var(--muted); font-size: 0.98rem; margin-top: 2px; }
+.job ul { margin: 10px 0 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.job li { position: relative; padding-left: 20px; font-size: 0.95rem; }
+.job li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 6px; height: 6px; background: var(--gold); }
+.job li b { color: var(--ink); font-weight: 600; }
+.sub { margin-top: 14px; }
+.sub .job-head h4 { margin: 0; font-size: 0.98rem; color: var(--ink); font-weight: 600; font-family: var(--sans); }
+.note { color: var(--muted); font-size: 0.86rem; font-style: italic; margin-top: 12px; }
 
-        .header-section {
-            text-align: center;
-        }
+.list { display: grid; gap: 8px; font-size: 0.95rem; }
+.list b { color: var(--ink); font-weight: 600; }
 
-        .profile-pic {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--accent-cyan);
-            box-shadow: var(--glow);
-            margin-bottom: 15px;
-        }
+.foot { margin-top: clamp(48px, 7vw, 72px); background: var(--navy); color: var(--on-navy-muted); }
+.foot .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding-top: 28px; padding-bottom: 28px; font-size: 0.9rem; }
+.foot a { color: var(--on-navy); text-decoration: none; display: inline-flex; gap: 10px; align-items: center; }
+.foot a:hover { color: var(--gold); }
 
-        .header-section h1 {
-            font-size: 3.2rem;
-            font-weight: 800;
-            line-height: 1;
-            margin-bottom: 8px;
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: -1px;
-        }
+[hidden] { display: none !important; }
 
-        .subtitle {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.95rem;
-            color: var(--accent-cyan);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 700;
-        }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: 0.01ms !important; } }
 
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            background: rgba(255, 255, 255, 0.02);
-            padding: 20px;
-            border-radius: 16px;
-            border: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            transition: color 0.3s ease;
-        }
-
-        .contact-item:hover {
-            color: var(--text-main);
-        }
-
-        .contact-icon {
-            font-family: 'JetBrains Mono', monospace;
-            color: var(--accent-emerald);
-            font-size: 1.1rem;
-            font-weight: bold;
-        }
-
-        .summary {
-            font-size: 1.05rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-            font-weight: 300;
-            text-align: justify;
-        }
-
-        .highlight {
-            color: var(--text-main);
-            font-weight: 600;
-        }
-
-        /* --- MAIN CONTENT --- */
-        .main-content {
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
-        }
-
-        section {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            color: var(--text-main);
-        }
-
-        h2::before {
-            content: '//';
-            color: var(--accent-cyan);
-            font-family: 'JetBrains Mono', monospace;
-            font-weight: 700;
-        }
-
-        h2::after {
-            content: '';
-            height: 1px;
-            flex-grow: 1;
-            background: linear-gradient(90deg, rgba(148, 163, 184, 0.15), transparent);
-        }
-
-        /* SKILLS GRID */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 15px;
-        }
-
-        .skill-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            padding: 20px;
-            border-radius: 16px;
-            backdrop-filter: blur(10px);
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-3px);
-            border-color: rgba(16, 185, 129, 0.4);
-            box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.15);
-        }
-
-        .skill-cat {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.75rem;
-            color: var(--accent-emerald);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-
-        .skill-val {
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--text-main);
-            line-height: 1.4;
-        }
-
-        /* DONUT CHART */
-        .trend-card {
-            grid-column: span 2;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        @media (max-width: 850px) {
-            .trend-card {
-                grid-column: span 1;
-            }
-            .donut-dashboard {
-                flex-direction: column;
-                gap: 20px;
-            }
-        }
-
-        .donut-dashboard {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 50px;
-            margin-top: 15px;
-            width: 100%;
-        }
-
-        .donut-container {
-            width: 120px;
-            height: 120px;
-            position: relative;
-        }
-
-        .donut-legend {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .legend-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-
-        .legend-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-        }
-
-        /* EXPERIENCE */
-        .experience-list {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-            position: relative;
-        }
-
-        /* Connecting line for timeline */
-        .experience-list::before {
-            content: '';
-            position: absolute;
-            left: 20px;
-            top: 0;
-            bottom: 0;
-            width: 1px;
-            background: linear-gradient(to bottom, var(--accent-cyan), transparent);
-            opacity: 0.3;
-        }
-
-        .job-card {
-            position: relative;
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 20px;
-            padding: 35px;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            margin-left: 40px;
-        }
-
-        /* Timeline Dot */
-        .job-card::before {
-            content: '';
-            position: absolute;
-            left: -24px;
-            top: 40px;
-            width: 9px;
-            height: 9px;
-            background: var(--bg-color);
-            border: 2px solid var(--accent-cyan);
-            border-radius: 50%;
-            transition: background 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .job-card:hover {
-            border-color: rgba(14, 165, 233, 0.4);
-            box-shadow: var(--glow);
-            transform: translateX(5px);
-        }
-
-        .job-card:hover::before {
-            background: var(--accent-cyan);
-            box-shadow: 0 0 10px var(--accent-cyan);
-        }
-
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 12px;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .job-title-group {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .job-title-text {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        .company-logo {
-            width: 45px;
-            height: 45px;
-            border-radius: 10px;
-            object-fit: contain;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 5px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .company-name {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--text-main);
-        }
-
-        .role-title {
-            font-size: 1.1rem;
-            color: var(--accent-cyan);
-            font-weight: 400;
-        }
-
-        .job-date {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.85rem;
-            color: var(--accent-emerald);
-            background: rgba(16, 185, 129, 0.1);
-            padding: 6px 12px;
-            border-radius: 20px;
-            border: 1px solid rgba(16, 185, 129, 0.2);
-        }
-
-        .company-desc {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-            font-style: italic;
-            border-left: 2px solid rgba(255,255,255,0.1);
-            padding-left: 15px;
-        }
-
-        .job-card ul {
-            list-style-type: none;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .job-card li {
-            position: relative;
-            padding-left: 25px;
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            line-height: 1.5;
-        }
-
-        .job-card li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            top: 0px;
-            color: var(--accent-cyan);
-            font-family: 'JetBrains Mono', monospace;
-            font-weight: bold;
-        }
-
-        .job-card li strong {
-            color: var(--text-main);
-            font-weight: 600;
-        }
-
-        /* EDUCATION */
-        .edu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .edu-card {
-            background: rgba(255,255,255,0.02);
-            border: 1px solid rgba(255,255,255,0.05);
-            padding: 20px;
-            border-radius: 16px;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .edu-school {
-            font-weight: 600;
-            font-size: 1.1rem;
-            color: var(--text-main);
-        }
-
-        .edu-degree {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        .edu-type {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.75rem;
-            color: var(--accent-emerald);
-            margin-bottom: 5px;
-        }
-    </style>
+@media print {
+  .bar, .foot { display: none; }
+  body { font-size: 10pt; }
+  .head { padding-top: 0; }
+  .result { background: none; }
+  .tools { background: none; padding-left: 0; }
+  .job { break-inside: avoid; }
+  a { text-decoration: none; }
+}
+</style>
 </head>
-
 <body>
 
-    <div class="container">
-        <!-- SIDEBAR -->
-        <aside class="sidebar">
-            <div class="header-section">
-                <img src="photo.jpg" alt="Eric Olombel" class="profile-pic">
-                <h1>Eric Olombel</h1>
-                <div class="subtitle">CFO / VP Finance</div>
-            </div>
+<header class="bar">
+  <div class="wrap">
+    <a class="back js-home" href="/">
+      <span class="mono" aria-hidden="true">EO</span>
+      <span data-i18n="back">Retour à la présentation</span>
+    </a>
+    <div class="lang" role="group" aria-label="Langue / Language">
+      <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
 
-            <p class="summary">
-                High-impact Finance Executive with 15+ years of experience scaling financial operations, driving venture capital fundraising <span class="highlight">($100M+)</span>, and engineering <span class="highlight">tech-enabled</span> finance departments. Expert in deploying AI-powered forecasting, robust ERPs, and structuring international operations for hyper-growth.
-            </p>
+<main class="wrap">
 
-            <div class="contact-info">
-                <div class="contact-item">
-                    <span class="contact-icon">📍</span> Paris, France
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">📱</span> <a href="tel:+33766386940" style="color: inherit; text-decoration: none;">+33 (0)7 66 38 69 40</a>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">✉️</span> <a href="mailto:eolombel@gmail.com" style="color: inherit; text-decoration: none;">eolombel@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">🔗</span> <a href="https://linkedin.com/in/eric-olombel" target="_blank" style="color: inherit; text-decoration: none;">linkedin.com/in/eric-olombel</a>
-                </div>
-            </div>
-        </aside>
+<!-- ===================== FR ===================== -->
+<article data-lang="fr" lang="fr">
+  <div class="head">
+    <div>
+      <h1>Eric Olombel</h1>
+      <p class="title">Directeur financier · CFO de transition · Transformation finance</p>
+      <p class="focus">Refonte des process · IA et automatisation · ERP · Reporting groupe · Contrôles et gouvernance</p>
+      <p class="contacts">
+        <a href="mailto:eolombel@gmail.com">eolombel@gmail.com</a>
+        <a href="tel:+33766386940">+33 (0)7 66 38 69 40</a>
+        <span>Paris, France</span>
+        <a href="https://www.linkedin.com/in/eric-olombel" target="_blank" rel="noopener">linkedin.com/in/eric-olombel</a>
+      </p>
+    </div>
+    <img class="photo" src="photo.jpg" width="132" height="132" alt="Portrait d'Eric Olombel">
+  </div>
 
-        <!-- MAIN CONTENT -->
-        <main class="main-content">
-            
-            <section>
-                <h2>Core Competencies</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-cat">Strategic Finance</div>
-                        <div class="skill-val">Board Reporting, M&A Due Diligence, LRP & AOP</div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-cat">Fundraising</div>
-                        <div class="skill-val">VC Relations (Series B/C), Venture Debt, Treasury</div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-cat">Finance Tech & AI</div>
-                        <div class="skill-val">NetSuite, Pennylane, Python, Claude, AI tools for Finance</div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-cat">Execution</div>
-                        <div class="skill-val">Cost Reduction, Unit Economics, Global Scalability</div>
-                    </div>
-                    
-                    <!-- Donut Chart -->
-                    <div class="skill-card trend-card">
-                        <div class="skill-cat">Core Expertise Breakdown</div>
-                        <div class="donut-dashboard">
-                            <div class="donut-container">
-                                <svg viewBox="0 0 36 36" class="donut">
-                                    <!-- Background -->
-                                    <circle cx="18" cy="18" r="15.91549430918954" fill="transparent" stroke="rgba(255,255,255,0.05)" stroke-width="4"></circle>
-                                    <!-- Segments -->
-                                    <circle cx="18" cy="18" r="15.91549430918954" fill="transparent" stroke="#6366f1" stroke-width="4" stroke-dasharray="30 70" stroke-dashoffset="25"></circle>
-                                    <circle cx="18" cy="18" r="15.91549430918954" fill="transparent" stroke="#0ea5e9" stroke-width="4" stroke-dasharray="25 75" stroke-dashoffset="-5"></circle>
-                                    <circle cx="18" cy="18" r="15.91549430918954" fill="transparent" stroke="#10b981" stroke-width="4" stroke-dasharray="10 90" stroke-dashoffset="-30"></circle>
-                                    <circle cx="18" cy="18" r="15.91549430918954" fill="transparent" stroke="#ec4899" stroke-width="4" stroke-dasharray="15 85" stroke-dashoffset="-40"></circle>
-                                    <circle cx="18" cy="18" r="15.91549430918954" fill="transparent" stroke="#f59e0b" stroke-width="4" stroke-dasharray="20 80" stroke-dashoffset="-55"></circle>
-                                    <!-- Center Text -->
-                                    <text x="18" y="19" fill="#fff" font-size="6" font-family="'JetBrains Mono', monospace" font-weight="700" text-anchor="middle" dominant-baseline="central">CFO</text>
-                                </svg>
-                            </div>
-                            <div class="donut-legend">
-                                <div class="legend-item"><div class="legend-dot" style="background: #6366f1"></div>Strategy & Ops</div>
-                                <div class="legend-item"><div class="legend-dot" style="background: #0ea5e9"></div>Corp. Finance</div>
-                                <div class="legend-item"><div class="legend-dot" style="background: #10b981"></div>Fundraising</div>
-                                <div class="legend-item"><div class="legend-dot" style="background: #ec4899"></div>Leadership</div>
-                                <div class="legend-item"><div class="legend-dot" style="background: #f59e0b"></div>Tech & AI</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+  <p class="summary">Directeur financier et CFO de transition avec plus de 20 ans d'expérience entre cabinet d'audit, banque d'investissement (Société Générale CIB) et scale-ups fintech, désormais concentré sur les missions de <b>transformation finance</b> : refonte des process de clôture et de reporting, <b>consolidation groupe multi-GAAP</b>, déploiements d'ERP (NetSuite, Pennylane), contrôles et gouvernance, et déploiement de l'<b>IA dans les équipes finance</b> (Claude, ChatGPT, Dust, Hermes). Pratique de l'<b>IFRS</b> et périmètre multi-entités (France, Royaume-Uni, Émirats arabes unis, Singapour, États-Unis). Résultats mesurables et rapides avec les équipes en place ; partenaire de confiance des CEO, boards, investisseurs, prêteurs et commissaires aux comptes.</p>
 
-            <section>
-                <h2>Professional Experience</h2>
-                <div class="experience-list">
-                    
-                    <!-- Finary -->
-                    <div class="job-card">
-                        <div class="job-header">
-                            <div class="job-title-group">
-                                <img src="https://www.google.com/s2/favicons?domain=finary.com&sz=128" alt="Finary" class="company-logo">
-                                <div class="job-title-text">
-                                    <div class="company-name">Finary</div>
-                                    <div class="role-title">VP Finance</div>
-                                </div>
-                            </div>
-                            <div class="job-date">03.2026 – Present</div>
-                        </div>
-                        <div class="company-desc">€10M ARR Fintech scale-up (70 employees)</div>
-                        <ul>
-                            <li>Spearheaded a <strong>25% reduction</strong> in recurring cost base through rigorous vendor renegotiation.</li>
-                            <li>Engineered <strong>AI-powered finance dashboards</strong> and automated workflows for real-time decision-making.</li>
-                            <li>Reforecasted entire top and bottom line within a 30-day window, introducing granular allocation keys.</li>
-                            <li>Led the implementation of <strong>Pennylane</strong> while optimizing global treasury operations.</li>
-                        </ul>
-                    </div>
+  <section class="sec">
+    <h2>Résultats clés de transformation</h2>
+    <div class="results">
+      <div class="result"><b>&lt;&#8239;7&nbsp;jours</b><span>clôture mensuelle (contre 15 jours), process et IA</span></div>
+      <div class="result"><b>-25&#8239;%</b><span>coûts récurrents, avec l'IA</span></div>
+      <div class="result"><b>-30&#8239;%</b><span>OPEX sur 3 ans chez Société Générale CIB</span></div>
+      <div class="result"><b>5&nbsp;pays</b><span>consolidation groupe multi-GAAP</span></div>
+      <div class="result"><b>2&nbsp;ERP</b><span>déploiements NetSuite et Pennylane</span></div>
+    </div>
+  </section>
 
-                    <!-- Flowdesk -->
-                    <div class="job-card">
-                        <div class="job-header">
-                            <div class="job-title-group">
-                                <img src="https://www.google.com/s2/favicons?domain=flowdesk.co&sz=128" alt="Flowdesk" class="company-logo">
-                                <div class="job-title-text">
-                                    <div class="company-name">Flowdesk</div>
-                                    <div class="role-title">Head of Finance</div>
-                                </div>
-                            </div>
-                            <div class="job-date">03.2023 – 12.2025</div>
-                        </div>
-                        <div class="company-desc">Fast-growing crypto-financial services provider</div>
-                        <ul>
-                            <li>Orchestrated financial due diligence for a <strong>$100M Series B equity raise</strong> and secured venture debt.</li>
-                            <li>Scaled the finance department, supporting rapid company growth from <strong>30 to 200 employees</strong>, and managed a team of up to 8 collaborators.</li>
-                            <li>Managed complex international treasury (fiat and crypto) ensuring multi-GAAP compliance (FR, SG, US).</li>
-                            <li>Directed the end-to-end implementation of <strong>NetSuite ERP</strong> to drive global scalability.</li>
-                        </ul>
-                    </div>
+  <section class="sec">
+    <h2>Compétences clés</h2>
+    <div class="skills">
+      <p><b>Transformation finance&#8239;:</b> refonte des process, accélération de la clôture, structuration de la fonction finance, optimisation des coûts</p>
+      <p><b>IA et automatisation&#8239;:</b> agents experts, automatisation des workflows, connecteurs IA-ERP (MCP), dashboards KPI, dataviz</p>
+      <p><b>Reporting groupe et consolidation&#8239;:</b> clôtures mensuelles, trimestrielles et annuelles, consolidation multi-entités, interco, prix de transfert</p>
+      <p><b>Contrôles et gouvernance&#8239;:</b> procédures de clôture, séparation des tâches, délégations de pouvoir, RACI, workflows de validation des achats</p>
+      <p><b>Normes comptables&#8239;:</b> French GAAP, IFRS (instruments financiers), US GAAP, UK GAAP, Singapore GAAP</p>
+      <p><b>Trésorerie et FP&amp;A&#8239;:</b> trésorerie multi-entités, relations bancaires, venture debt, budget, reforecast, KPI</p>
+      <p><b>Parties prenantes&#8239;:</b> commissaires aux comptes, cabinets de conseil, boards, investisseurs, banques et prêteurs</p>
+      <p><b>Réglementaire&#8239;:</b> supervision AMF, PSAN / PSCA sous MiCA, examens réglementaires FED et BCE</p>
+    </div>
+    <p class="tools"><b>Outils</b> · <b>IA&#8239;:</b> Claude, ChatGPT, Copilot, Dust, Hermes · <b>ERP et finance&#8239;:</b> NetSuite, Pennylane · <b>Data&#8239;:</b> Python, Power BI, Excel</p>
+  </section>
 
-                    <!-- Blockchain@HEC -->
-                    <div class="job-card">
-                        <div class="job-header">
-                            <div class="job-title-group">
-                                <img src="hec.png" alt="Blockchain@HEC" class="company-logo">
-                                <div class="job-title-text">
-                                    <div class="company-name">Blockchain@HEC</div>
-                                    <div class="role-title">Investor Relations Manager</div>
-                                </div>
-                            </div>
-                            <div class="job-date">01.2022 – 03.2023</div>
-                        </div>
-                        <div class="company-desc">Professional association dedicated to educating and connecting the blockchain / crypto ecosystem.</div>
-                        <ul>
-                            <li>Developed and maintained relationships with current and potential investors.</li>
-                            <li>Coordinated investor meetings, monitored market trends, and developed IR strategies.</li>
-                            <li>Bridged HEC alumni and students across 4 hubs (Paris, London, Dubai, Hong Kong) via events, analysis, and labs.</li>
-                        </ul>
-                    </div>
+  <section class="sec">
+    <h2>Expérience professionnelle</h2>
 
-                    <!-- Vokko -->
-                    <div class="job-card">
-                        <div class="job-header">
-                            <div class="job-title-group">
-                                <img src="vokko.jpg" alt="Vokko" class="company-logo">
-                                <div class="job-title-text">
-                                    <div class="company-name">Vokko</div>
-                                    <div class="role-title">Chief Financial Officer</div>
-                                </div>
-                            </div>
-                            <div class="job-date">12.2021 – 12.2022</div>
-                        </div>
-                        <ul>
-                            <li>Designed and executed the core financial roadmap, establishing robust forecasting and reporting systems.</li>
-                            <li>Acted as the primary strategic partner to the Founder/CEO, managing relations with investors and auditors.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Private Investor -->
-                    <div class="job-card">
-                        <div class="job-header">
-                            <div class="job-title-group">
-                                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230ea5e9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M3 3v18h18'/><path d='M18 9l-5 5-4-4-5 5'/><circle cx='18' cy='9' r='2' fill='%2310b981' stroke='%2310b981'/></svg>" alt="Tech Startups" class="company-logo">
-                                <div class="job-title-text">
-                                    <div class="company-name">Tech Startups</div>
-                                    <div class="role-title">Private Investor & Fundraiser</div>
-                                </div>
-                            </div>
-                            <div class="job-date">01.2019 – Present</div>
-                        </div>
-                        <div class="company-desc">Early-stage Tech and FinTech Investor.</div>
-                        <ul>
-                            <li>Conducted financial analysis, valuation (DCF, comparables), and due diligence on potential investments.</li>
-                            <li>Advised portfolio companies on business models and investment committee preparations.</li>
-                            <li><strong>Shareholder in:</strong> Unipile, Ledger, MyEasyFarm, Spash, October, MyLovelyPlanet, Squadeasy, Evora Bioscience, Sismo, Adok, Hoverseen, Sensivic, Upcyclea, Watiz.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Societe Generale -->
-                    <div class="job-card">
-                        <div class="job-header">
-                            <div class="job-title-group">
-                                <img src="https://www.google.com/s2/favicons?domain=societegenerale.com&sz=128" alt="Société Générale" class="company-logo">
-                                <div class="job-title-text">
-                                    <div class="company-name">Société Générale CIB</div>
-                                    <div class="role-title">Director & VP</div>
-                                </div>
-                            </div>
-                            <div class="job-date">2006 – 2021</div>
-                        </div>
-                        <div class="company-desc">Successive global leadership roles in New York and Paris</div>
-                        <ul>
-                            <li>Directed the <strong>€200M FRTB program</strong>, leading a cross-functional organization of 100+ global stakeholders and directly managing up to 30 collaborators.</li>
-                            <li>Achieved a <strong>30% OPEX reduction</strong> over 3 years via strategic offshoring and organizational restructuring.</li>
-                            <li>Reduced daily workload by 25% through <strong>self-taught Python</strong> and IT automation initiatives.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Semaphores -->
-                    <div class="job-card">
-                        <div class="job-header">
-                            <div class="job-title-group">
-                                <img src="semaphores.jpg" alt="Semaphores" class="company-logo">
-                                <div class="job-title-text">
-                                    <div class="company-name">Semaphores Expertise</div>
-                                    <div class="role-title">Financial Auditor & Accountant</div>
-                                </div>
-                            </div>
-                            <div class="job-date">09.2003 – 11.2006</div>
-                        </div>
-                        <div class="company-desc">Cabinet d'audit et d'expertise comptable (Montpellier, France).</div>
-                        <ul>
-                            <li>Built a solid foundation in accounting, auditing standards, and financial reporting.</li>
-                            <li>Executed financial audits and ensured strict compliance with regulatory frameworks.</li>
-                        </ul>
-                    </div>
-
-                </div>
-            </section>
-
-            <section>
-                <h2>Education & Communities</h2>
-                <div class="edu-grid">
-                    <div class="edu-card">
-                        <div class="edu-type">Degree</div>
-                        <div class="edu-school">HEC Paris</div>
-                        <div class="edu-degree">Executive Master of Science Innovation & Entrepreneurship</div>
-                    </div>
-                    <div class="edu-card">
-                        <div class="edu-type">Certificate</div>
-                        <div class="edu-school">Columbia Business School</div>
-                        <div class="edu-degree">Executive Leadership Program (New York)</div>
-                    </div>
-                    <div class="edu-card">
-                        <div class="edu-type">Certification</div>
-                        <div class="edu-school">HEC Paris</div>
-                        <div class="edu-degree">Private Equity and Venture Capital</div>
-                    </div>
-                    <div class="edu-card">
-                        <div class="edu-type">Certification</div>
-                        <div class="edu-school">HEC Paris</div>
-                        <div class="edu-degree">Entrepreneurial Finance</div>
-                    </div>
-                    <div class="edu-card">
-                        <div class="edu-type">Certification</div>
-                        <div class="edu-school">AMF</div>
-                        <div class="edu-degree">Autorité des marchés financiers (AMF) Certification</div>
-                    </div>
-                    <div class="edu-card">
-                        <div class="edu-type">Communities</div>
-                        <div class="edu-school">Tech & Finance</div>
-                        <div class="edu-degree">French Tech 120 CFO Club, France Digitale CFO Club</div>
-                    </div>
-                </div>
-            </section>
-
-        </main>
+    <div class="job">
+      <div class="job-head"><h3>VP Finance (périmètre CFO) · <span class="org">Finary, Paris</span></h3><span class="dates">03.2026 - 07.2026</span></div>
+      <p class="ctx">Fintech patrimoniale régulée, 80 salariés · France et US · agréée PSI et PSCA (MiCA) · bras droit du CEO</p>
+      <ul>
+        <li>Refonte du process de clôture et réduction du délai de clôture mensuelle de 15 à <b>moins de 7 jours</b> : nouvelles procédures de clôture, Pennylane connecté à Claude via MCP et IA utilisée pour supprimer les goulets d'étranglement opérationnels</li>
+        <li>Construction du cadre de gouvernance finance : séparation des tâches, délégations de pouvoir, RACI et workflow de vendor due diligence assisté par IA (validation IT, Juridique, Finance et Conformité)</li>
+        <li>Réduction des <b>coûts récurrents de 25&#8239;%</b> (analyse des contrats par IA, renégociation fournisseurs) ainsi que du plan de recrutement et de la masse salariale de 25&#8239;% par rapport au budget ; refonte du budget par ligne de produit</li>
+        <li>Déploiement de l'IA sur les process finance : agents experts en comptabilité, FP&amp;A, trésorerie, fiscalité et corporate, dashboard KPI en temps réel et outil de suivi du cash-flow</li>
+        <li>Responsable du reporting groupe, des commissaires aux comptes, des banques et de 20&nbsp;M€ de trésorerie</li>
+      </ul>
     </div>
 
+    <div class="job">
+      <div class="job-head"><h3>Head of Finance · <span class="org">Flowdesk, Paris</span></h3><span class="dates">03.2023 - 12.2025</span></div>
+      <p class="ctx">Market maker crypto et services financiers · entités France, UK, Émirats arabes unis, Singapour et US · PSAN, supervision AMF</p>
+      <ul>
+        <li>Structuration de la fonction finance pour accompagner l'hypercroissance de <b>30 à 200 salariés</b> ; constitution et management d'une équipe allant jusqu'à 8 personnes</li>
+        <li>Direction du déploiement de bout en bout de l'<b>ERP NetSuite</b> pour le passage à l'échelle multi-entités ; obtention de subventions et crédits d'impôt (CIR/CII, JEI, Bpifrance)</li>
+        <li>Pilotage des clôtures mensuelles, trimestrielles et annuelles et de la <b>consolidation groupe</b> sur 5 juridictions, selon les normes French GAAP, US GAAP, UK GAAP et Singapore GAAP</li>
+        <li>Gestion des comptes interco et des prix de transfert avec les commissaires aux comptes et les cabinets de conseil ; cartographie des flux comptables des opérations complexes sur crypto-actifs</li>
+        <li>Automatisation par IA du suivi de trésorerie et du reporting investisseurs ; supervision de la trésorerie multi-entités (fiat et crypto), des relations bancaires et du reporting de la venture debt BlackRock</li>
+        <li>Conduite de la due diligence financière d'une <b>série B de 100&nbsp;M$</b> ; construction du reporting KPI, OKR et investisseurs pour la direction et le board</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><h3>Co-fondateur et CFO · <span class="org">Vokko, Paris</span></h3><span class="dates">12.2021 - 12.2022</span></div>
+      <p class="ctx">Start-up co-fondée pendant l'Executive Master HEC Paris</p>
+      <ul>
+        <li>Conception de la feuille de route financière, mise en place du forecasting et du reporting, et gestion des relations avec les investisseurs et les auditeurs</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><h3><span class="org">Société Générale CIB, New York et Paris</span></h3><span class="dates">2006 - 2021</span></div>
+      <p class="ctx">Postes de direction successifs : Financial Controller → Vice President → Director · French GAAP et IFRS, y compris la valorisation à la juste valeur des instruments financiers</p>
+      <div class="sub">
+        <div class="job-head"><h4>Director · Program Manager, FRTB, Paris</h4><span class="dates">2020 - 2021</span></div>
+        <ul><li>Direction du programme de transformation réglementaire FRTB (Fundamental Review of the Trading Book, <b>200&nbsp;M€</b>), à la tête d'une organisation transverse de plus de 100 parties prenantes internationales</li></ul>
+      </div>
+      <div class="sub">
+        <div class="job-head"><h4>Director · Head of Market Risks &amp; P&amp;L, New York</h4><span class="dates">2015 - 2019</span></div>
+        <ul>
+          <li>Encadrement d'une équipe d'une vingtaine d'ingénieurs financiers en charge de la certification du P&amp;L, de l'income attribution, de la VaR/SVaR, des stress tests et des sensibilités sur les activités actions</li>
+          <li>Analyse financière, forecast et reporting pour la direction américaine (300&nbsp;M$ de revenus)</li>
+          <li>Réduction de <b>30&#8239;% des OPEX</b> sur 3 ans grâce à l'offshoring et à la restructuration organisationnelle</li>
+          <li>Réduction de 25&#8239;% de la charge de travail quotidienne grâce à l'automatisation Python et IT, acquise en autoformation et sans coût additionnel</li>
+          <li>Référent lors des examens réglementaires FED et BCE, avec fourniture de données certifiées et analysées</li>
+        </ul>
+      </div>
+      <div class="sub">
+        <div class="job-head"><h4>Vice President · Head of Experts Market Control Team, Paris</h4><span class="dates">2012 - 2015</span></div>
+        <ul>
+          <li>Management d'une équipe internationale de 30 experts seniors et analystes financiers au sein de la fonction contrôle</li>
+          <li>Pilotage des projets clés de la ligne métier : Asset Quality Review de la BCE, offshoring et réduction des coûts, outils de booking et de valorisation</li>
+        </ul>
+      </div>
+      <div class="sub">
+        <div class="job-head"><h4>Financial Controller · Legacy Assets, Paris</h4><span class="dates">2006 - 2012</span></div>
+        <ul><li>Analyse, contrôle et reporting sur 35&nbsp;Md€ de notionnel d'actifs (obligations, IRS, CDS, prêts) pendant la crise Lehman Brothers et des subprimes</li></ul>
+      </div>
+      <p class="note">Congé sabbatique : mi-2019 à 2020</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><h3>Comptable et auditeur financier · <span class="org">Semaphores Expertise, Montpellier</span></h3><span class="dates">09.2003 - 11.2006</span></div>
+      <p class="ctx">Cabinet d'expertise comptable et d'audit</p>
+      <ul>
+        <li>Tenue comptable et établissement des comptes annuels pour des PME et des groupes de plusieurs centaines de salariés</li>
+        <li>Réalisation de missions d'audit financier conformément aux normes professionnelles et réglementaires</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Investissement</h2>
+    <div class="job">
+      <div class="job-head"><h3>Investisseur privé · <span class="org">Tech et FinTech early-stage</span></h3><span class="dates">Depuis 01.2019</span></div>
+      <ul><li>Analyse financière, valorisation et due diligence sur plus de 14 investissements (dont Ledger, Unipile, October) ; accompagnement des sociétés du portefeuille</li></ul>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Formation et certifications</h2>
+    <div class="list">
+      <p><b>HEC Paris</b> · Executive Master of Science, Innovation &amp; Entrepreneurship, 2022 · Certifications : Private Equity &amp; Venture Capital, Entrepreneurial Finance</p>
+      <p><b>Columbia Business School</b>, New York · Executive Leadership Program, 2018</p>
+      <p><b>Anthropic Academy</b> · Claude 101, AI Fluency: Framework &amp; Foundations, 2026 (autres certifications en cours)</p>
+      <p><b>AMF</b> · Certification Autorité des Marchés Financiers, 2021</p>
+      <p><b>Montpellier Business School</b> · Master en Finance et Gestion des Entreprises, majeure Comptabilité et Contrôle de Gestion, 2006</p>
+      <p><b>IUT Montpellier</b> · DUT GEA (Gestion des Entreprises et des Administrations), option Finance-Comptabilité, 2003</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Informations complémentaires</h2>
+    <div class="list">
+      <p><b>Engagement associatif&#8239;:</b> Responsable des Relations Investisseurs, Association Blockchain@HEC (2022 - 2023), pilotage de la stratégie IR sur 4 hubs internationaux (Paris, Londres, Dubaï, Hong Kong)</p>
+      <p><b>Communautés&#8239;:</b> Club des CFO French Tech 120 · Club des CFO France Digitale · membre du programme SG Talent pendant 10 ans</p>
+      <p><b>Langues&#8239;:</b> Français (langue maternelle) · Anglais (courant, 5 ans passés à New York, management d'équipes internationales et anglophones)</p>
+      <p><b>Centres d'intérêt&#8239;:</b> Voyages (50+ pays) · Plongée sous-marine (certifications PADI Deep Diver et Enriched Air Nitrox) · Padel</p>
+    </div>
+  </section>
+</article>
+
+<!-- ===================== EN ===================== -->
+<article data-lang="en" lang="en" hidden>
+  <div class="head">
+    <div>
+      <h1>Eric Olombel</h1>
+      <p class="title">Finance Director · Interim CFO · Finance Transformation</p>
+      <p class="focus">Process Redesign · AI &amp; Automation · ERP Implementation · Group Reporting · Controls &amp; Governance</p>
+      <p class="contacts">
+        <a href="mailto:eolombel@gmail.com">eolombel@gmail.com</a>
+        <a href="tel:+33766386940">+33 (0)7 66 38 69 40</a>
+        <span>Paris, France</span>
+        <a href="https://www.linkedin.com/in/eric-olombel" target="_blank" rel="noopener">linkedin.com/in/eric-olombel</a>
+      </p>
+    </div>
+    <img class="photo" src="photo.jpg" width="132" height="132" alt="Portrait of Eric Olombel">
+  </div>
+
+  <p class="summary">Finance Director and interim CFO with 20+ years across audit practice, investment banking (Societe Generale CIB) and VC-backed fintech scale-ups, now focused on <b>finance transformation</b> missions: end-to-end redesign of finance functions, covering closing and reporting processes, <b>multi-GAAP group consolidation</b>, ERP implementations (NetSuite, Pennylane), controls and governance, and the deployment of <b>AI across finance teams</b> with Claude, ChatGPT, Dust and Hermes. Hands-on <b>IFRS</b> experience and multi-entity scope across France, the UK, the UAE, Singapore and the US. Delivers measurable results quickly alongside existing teams; trusted partner to CEOs, boards, investors, lenders and statutory auditors.</p>
+
+  <section class="sec">
+    <h2>Key transformation results</h2>
+    <div class="results">
+      <div class="result"><b>&lt;&#8239;7&nbsp;days</b><span>month-end close (from 15), via process redesign and AI</span></div>
+      <div class="result"><b>-25%</b><span>recurring costs, with AI-driven contract analysis</span></div>
+      <div class="result"><b>-30%</b><span>OPEX over 3 years at Societe Generale CIB</span></div>
+      <div class="result"><b>5&nbsp;countries</b><span>multi-GAAP group consolidation</span></div>
+      <div class="result"><b>2&nbsp;ERPs</b><span>NetSuite and Pennylane implementations</span></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Core competencies</h2>
+    <div class="skills">
+      <p><b>Finance Transformation:</b> process redesign, close acceleration, finance function design and scaling, cost optimization</p>
+      <p><b>AI &amp; Automation:</b> expert agents, workflow automation, AI-to-ERP connectors (MCP), KPI dashboards, data visualization</p>
+      <p><b>Group Reporting &amp; Consolidation:</b> monthly, quarterly and annual closings, multi-entity consolidation, intercompany, transfer pricing</p>
+      <p><b>Controls &amp; Governance:</b> closing procedures, segregation of duties, delegations of authority, RACI, purchase approval workflows</p>
+      <p><b>Accounting Standards:</b> French GAAP, IFRS (financial instruments), US GAAP, UK GAAP, Singapore GAAP</p>
+      <p><b>Treasury &amp; FP&amp;A:</b> multi-entity cash, banking relationships, venture debt, budgeting, reforecasting, KPIs</p>
+      <p><b>Stakeholders:</b> statutory auditors, advisory firms, boards, investors, banks and lenders</p>
+      <p><b>Regulatory:</b> AMF supervision, PSAN / PSCA under MiCA, FED and ECB regulatory exams</p>
+    </div>
+    <p class="tools"><b>Tools</b> · <b>AI:</b> Claude, ChatGPT, Copilot, Dust, Hermes · <b>ERP &amp; finance:</b> NetSuite, Pennylane · <b>Data:</b> Python, Power BI, Excel</p>
+  </section>
+
+  <section class="sec">
+    <h2>Professional experience</h2>
+
+    <div class="job">
+      <div class="job-head"><h3>VP Finance (CFO scope) · <span class="org">Finary, Paris</span></h3><span class="dates">03.2026 - 07.2026</span></div>
+      <p class="ctx">Regulated wealth-management fintech, 80 employees · France and US entities · PSI and PSCA (MiCA) licensed · right hand to the CEO</p>
+      <ul>
+        <li>Redesigned the closing process and cut the month-end close from 15 to <b>under 7 days</b>: new closing procedures, Pennylane connected to Claude via MCP, and AI used to remove operational bottlenecks</li>
+        <li>Built the finance governance framework: segregation of duties, delegations of authority, RACI and an AI-assisted vendor due diligence workflow (IT, Legal, Finance and Compliance sign-off)</li>
+        <li>Cut <b>recurring costs by 25%</b> (AI-driven contract analysis, vendor renegotiation) and the hiring plan and staffing costs by 25% vs. budget; rebuilt the budget by product line</li>
+        <li>Deployed AI across finance processes: expert agents for accounting, FP&amp;A, treasury, tax and corporate, a real-time KPI dashboard and a cash-flow tracking tool</li>
+        <li>Owned group reporting, the statutory auditor relationship, banking relationships and €20M in treasury</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><h3>Head of Finance · <span class="org">Flowdesk, Paris</span></h3><span class="dates">03.2023 - 12.2025</span></div>
+      <p class="ctx">Crypto market maker and financial services group · entities in France, UK, UAE, Singapore and US · PSAN-registered, AMF supervision</p>
+      <ul>
+        <li>Scaled the finance function through hyper-growth from <b>30 to 200 employees</b>, building and leading a team of up to 8</li>
+        <li>Directed the end-to-end <b>NetSuite ERP</b> implementation to support multi-entity scalability; secured subsidies and tax credits (CIR/CII, JEI, Bpifrance)</li>
+        <li>Led monthly, quarterly and annual closings and the <b>group consolidation</b> across 5 jurisdictions under French, US, UK and Singapore GAAP</li>
+        <li>Managed intercompany accounts and transfer pricing with statutory auditors and advisory firms; mapped accounting flows for complex crypto-asset operations</li>
+        <li>Automated treasury monitoring and investor reporting with AI-based tools; oversaw multi-entity treasury (fiat and crypto), banking relationships and BlackRock venture debt reporting</li>
+        <li>Led the financial due diligence for a <b>$100M Series B</b>; built KPI, OKR and investor reporting for management and the board</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><h3>Co-founder &amp; CFO · <span class="org">Vokko, Paris</span></h3><span class="dates">12.2021 - 12.2022</span></div>
+      <p class="ctx">Start-up co-founded during the HEC Paris Executive Master</p>
+      <ul><li>Designed the financial roadmap, set up forecasting and reporting, and managed relations with investors and auditors</li></ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><h3><span class="org">Societe Generale CIB, New York &amp; Paris</span></h3><span class="dates">2006 - 2021</span></div>
+      <p class="ctx">Successive leadership roles: Financial Controller → Vice President → Director · French GAAP and IFRS, including fair-value measurement of financial instruments</p>
+      <div class="sub">
+        <div class="job-head"><h4>Director · Program Manager, FRTB, Paris</h4><span class="dates">2020 - 2021</span></div>
+        <ul><li>Directed the <b>€200M</b> Fundamental Review of the Trading Book regulatory transformation program, leading a cross-functional organization of 100+ global stakeholders</li></ul>
+      </div>
+      <div class="sub">
+        <div class="job-head"><h4>Director · Head of Market Risks &amp; P&amp;L, New York</h4><span class="dates">2015 - 2019</span></div>
+        <ul>
+          <li>Led a team of around 20 financial engineers certifying P&amp;L, income attribution, VaR/SVaR, stress tests and sensitivities for equity trading</li>
+          <li>Delivered financial analysis, forecasting and reporting to US top management ($300M revenues)</li>
+          <li>Achieved a <b>30% OPEX reduction</b> over 3 years through offshoring and organizational restructuring</li>
+          <li>Cut daily workload by 25% through self-taught Python and IT automation, at no extra cost</li>
+          <li>Referent for FED and ECB regulatory exams, providing certified and analyzed data</li>
+        </ul>
+      </div>
+      <div class="sub">
+        <div class="job-head"><h4>Vice President · Head of Experts Market Control Team, Paris</h4><span class="dates">2012 - 2015</span></div>
+        <ul>
+          <li>Managed a global team of 30 senior experts and financial analysts within the control function</li>
+          <li>Led the business line's key projects: ECB Asset Quality Review, offshoring and cost savings, booking and valuation tools</li>
+        </ul>
+      </div>
+      <div class="sub">
+        <div class="job-head"><h4>Financial Controller · Legacy Assets, Paris</h4><span class="dates">2006 - 2012</span></div>
+        <ul><li>Analyzed, controlled and reported on €35B notional in assets (bonds, IRS, CDS, loans) through the Lehman Brothers and subprime crisis</li></ul>
+      </div>
+      <p class="note">Sabbatical: mid-2019 to 2020</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><h3>Accountant &amp; Financial Auditor · <span class="org">Semaphores Expertise, Montpellier</span></h3><span class="dates">09.2003 - 11.2006</span></div>
+      <p class="ctx">Chartered accounting and audit firm</p>
+      <ul>
+        <li>Prepared bookkeeping and statutory annual accounts for SMEs and groups of several hundred employees</li>
+        <li>Executed financial audits in compliance with professional and regulatory standards</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Investing</h2>
+    <div class="job">
+      <div class="job-head"><h3>Private Investor · <span class="org">Early-stage Tech &amp; FinTech</span></h3><span class="dates">01.2019 - Present</span></div>
+      <ul><li>Financial analysis, valuation and due diligence on 14+ investments (including Ledger, Unipile, October); advisory to portfolio companies</li></ul>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Education &amp; certifications</h2>
+    <div class="list">
+      <p><b>HEC Paris</b> · Executive Master of Science, Innovation &amp; Entrepreneurship, 2022 · Certifications: Private Equity &amp; Venture Capital, Entrepreneurial Finance</p>
+      <p><b>Columbia Business School</b>, New York · Executive Leadership Program, 2018</p>
+      <p><b>Anthropic Academy</b> · Claude 101, AI Fluency: Framework &amp; Foundations, 2026 (further courses in progress)</p>
+      <p><b>AMF</b> · Autorité des Marchés Financiers Certification, 2021</p>
+      <p><b>Montpellier Business School</b> · Master's Degree in Finance &amp; Business Management, major in Accounting &amp; Management Control, 2006</p>
+      <p><b>IUT Montpellier</b> · DUT GEA (Business Administration), Accounting &amp; Finance, 2003</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Additional information</h2>
+    <div class="list">
+      <p><b>Volunteering:</b> Investor Relations Manager, Blockchain@HEC Association (2022 - 2023): led the IR strategy across 4 hubs (Paris, London, Dubai, Hong Kong)</p>
+      <p><b>Communities:</b> French Tech 120 CFO Club · France Digitale CFO Club · SG Talent member for 10 years</p>
+      <p><b>Languages:</b> French (native) · English (fluent, 5 years based in New York, managing international English-speaking teams)</p>
+      <p><b>Interests:</b> Travel (50+ countries) · Scuba diving (PADI Deep Diver &amp; Enriched Air Nitrox certified) · Padel</p>
+    </div>
+  </section>
+</article>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>© 2026 Eric Olombel</span>
+    <a class="js-home" href="/"><span data-i18n="foot">Découvrir mes offres de conseil</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var T = {
+    fr: { back: "Retour à la présentation", foot: "Découvrir mes offres de conseil", title: "Eric Olombel · CV" },
+    en: { back: "Back to overview", foot: "See my consulting offer", title: "Eric Olombel · Resume" }
+  };
+  function store(v) { try { localStorage.setItem("eo-lang", v); } catch (e) {} }
+  function read() { try { return localStorage.getItem("eo-lang"); } catch (e) { return null; } }
+  function initial() {
+    var q = new URLSearchParams(location.search).get("lang");
+    if (q === "fr" || q === "en") return q;
+    var s = read();
+    if (s === "fr" || s === "en") return s;
+    return (navigator.language || "fr").toLowerCase().indexOf("fr") === 0 ? "fr" : "en";
+  }
+  function setLang(l) {
+    document.querySelectorAll("article[data-lang]").forEach(function (a) { a.hidden = a.dataset.lang !== l; });
+    document.querySelectorAll("[data-i18n]").forEach(function (el) { el.textContent = T[l][el.dataset.i18n]; });
+    document.querySelectorAll(".lang button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.lang === l)); });
+    document.querySelectorAll(".js-home").forEach(function (a) { a.href = "/?lang=" + l; });
+    document.documentElement.lang = l;
+    document.title = T[l].title;
+    try { var u = new URL(location.href); u.searchParams.set("lang", l); history.replaceState(null, "", u); } catch (e) {}
+    store(l);
+  }
+  document.querySelectorAll(".lang button").forEach(function (b) { b.addEventListener("click", function () { setLang(b.dataset.lang); }); });
+  setLang(initial());
+})();
+</script>
 </body>
 </html>
